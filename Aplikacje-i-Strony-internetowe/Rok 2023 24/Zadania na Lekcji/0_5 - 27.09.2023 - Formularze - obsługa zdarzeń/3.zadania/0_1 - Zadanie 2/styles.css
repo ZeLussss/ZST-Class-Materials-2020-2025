@@ -1,0 +1,21 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FF7F50;
+    color: white;
+}
+
+input#liczba_A, input#liczba_B
+{
+    color: #FF7F50;
+}
+
+input#but
+{
+    padding: 10px;
+    margin-top: 2px;
+    width: 75px;
+    border: 2px solid black;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styl2.css">
+
+    <script>
+
+        let kolor;
+        function zmien_kolor( jaki )
+        {
+            kolor = jaki;
+        }
+
+        function zmiana()
+        {
+            let text        = document.getElementById( "text" );
+
+            let wielkosc    = document.getElementById( "rozmiar" ).value;
+            let format      = document.getElementById( "formatowanie" ).value;
+
+            let wiel_str = String( wielkosc ) + "%";
+            text.style.fontSize = wiel_str;
+
+            text.style.fontStyle = format;
+
+            text.style.color = kolor;
+        }
+
+    </script>
+
+    <title>Formatowanie</title>
+</head>
+<body>
+
+    <section id="baner">
+        <h1>Formatowanie dokumentów HTML</h1>
+    </section>
+
+    <section id="gorny1">
+
+        <h2>Przykład listy - hobby</h2>
+
+        <ul>
+
+            <li>muzyka</li>
+            <li>turystyka
+
+                <ol>
+
+                    <li>góry</li>
+                    <li>jeziora</li>
+                    <li>na rowerze</li>
+    
+                </ol>
+
+            </li>
+
+            <li>książki</li>
+
+        </ul>
+
+    </section>
+
+    <section id="gorny2">
+
+        <h2>Przykład tabeli - rozkład dnia</h2>
+
+        <table>
+
+            <tr>
+                <th>Pora dnia</th>
+                <th>obowiązki</th>
+            </tr>
+
+            <tr>
+                <td>rano</td>
+                <td>nauka</td>
+            </tr>
+
+            <tr>
+                <td>południe</td>
+                <td>zajęcia dodatkowe</td>
+            </tr>
+
+            <tr>
+                <td>popołudnie</td>
+                <td rowspan="2">moje hobby</td>
+            </tr>
+
+            <tr>
+                <td>wieczór</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section id="gorny3">
+        <img src="napisy.png" alt="technologia web">
+    </section>
+
+    <section id="glowny">
+
+        <p><label for="rozmiar">Podaj rozmiar tekstu w procentach: </label> <input type="number" name="rozmiar" id="rozmiar" onchange="zmiana()" min="1">%</p>
+
+        <p>
+
+            <select name="formatowanie" id="formatowanie" onchange="zmiana()">
+
+                <option value="normal">prosty</option>
+                <option value="italic">kursywa</option>
+
+            </select>
+
+        </p>
+
+        <p>
+
+            Jakim kolorem sformatować tekst? Wybierz przycisk <br>
+
+            <button onclick="zmien_kolor( 'red' ); zmiana()"></button>
+            <button onclick="zmien_kolor( 'green' ); zmiana()"></button>
+            <button onclick="zmien_kolor( 'blue' ); zmiana()"></button>
+
+        </p>
+
+        <p id="text">To jest przykład paragrafu, który może być dowolnie formatowany przez JavaScript</p>
+
+    </section>
+
+    <section id="stopka">
+
+        <p>Formatowaniem tekstu zajmował się: <i>Ksawery Zelek</i></p>
+
+        <a href="https://formatowanie.pl" target="_blank">Odwiedź także</a>
+
+    </section>
+    
+</body>
+</html>

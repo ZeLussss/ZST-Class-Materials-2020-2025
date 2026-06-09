@@ -1,0 +1,74 @@
+*
+{
+    block-size: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: Tahoma;
+}
+
+.upper
+{
+    background-color: #115C97;
+    color: dodgerblue;
+    height: 100px;
+    width: 50%;
+    text-align: center;
+    font-size: 150%;
+    float: left;
+}
+
+.main
+{
+    background-color: #ACCEE8;
+    height: 400px;
+    padding: 30px;
+    clear: both;
+}
+
+.footer
+{
+    background-color: #115C97;
+    height: 200px;
+    width: 25%;
+    float: left;
+    overflow: hidden;
+}
+
+a
+{
+    color: dodgerblue;
+    margin: 10px;
+}
+
+table
+{
+    width: 100%;
+    border: 1px solid blue;
+}
+
+table th
+{
+    background-color: #115C97;
+    color: white
+}
+
+table td
+{
+    border: 1px dashed blue; 
+}
+
+table tr:hover
+{
+    background-color: #115C97;
+    color: white;
+}
+
+.repair
+{
+    text-align: center;
+    margin-top: 20%;
+}

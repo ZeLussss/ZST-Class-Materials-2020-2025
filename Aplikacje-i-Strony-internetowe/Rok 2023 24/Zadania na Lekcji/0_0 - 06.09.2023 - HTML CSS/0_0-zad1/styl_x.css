@@ -1,0 +1,193 @@
+/* styl dla strony menu_poziom.html */
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #212121;
+}
+
+#kontener
+{
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    display: block;
+    background-color: #212121;   
+}   
+
+#gora1
+{
+    width: 15%;
+    height: 15%;
+    background-color: #0a9396; 
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+#gora2
+{
+    width: 70%;
+    height: 15%;
+    float: left;
+    background-color: #005f73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 120%;
+}
+
+#gora3
+{
+    width: 15%;
+    height: 15%;
+    background-color: #0a9396;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    float: left;
+}
+
+#poziom
+{
+    clear: both;
+    display: block;
+    width: 100%;
+    background-color: #f57c00;
+}
+
+#poziom > ul
+{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0;
+}
+
+#poziom > ul > li
+{
+    float: left;
+    background-color: #ff9800;
+    font-size: 120%;
+    letter-spacing: 2px;
+    border-right: 1px white solid;
+    border-bottom: 1px white solid;
+}
+
+#poziom > ul > li > a
+{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+#poziom > ul > li > a:hover
+{
+    color: white;
+}
+
+#poziom > ul > li > a:active
+{
+    background-color: #ff9855;
+    color: black;
+}
+
+#blok
+{
+    width: 60%;
+    height: 75%;
+
+    float: left;
+}
+
+#blok1
+{
+    width: 100%;
+    height: 30%;
+    margin: 0;
+
+    font-size: 130%;
+    background-color: #d2691e;
+    float: left;
+}
+
+#blok1 > h2
+{
+    font-size: 130%;
+    padding-top: 10px;
+    text-indent: 30px;
+    color: gray;
+}
+
+#blok1 > p
+{
+    padding-left: 10px;
+    text-indent: 20px;
+}
+
+#blok2
+{
+    width: 100%;
+    height: 70%;
+    margin: 0;
+
+    font-size: 130%;
+    background-color: #bdb76b;
+    float: left;
+}
+
+#blok2 > h2
+{
+    padding-top: 20px;
+    text-indent: 30px;
+    color: gray;
+}
+
+#blok2 > p
+{
+    padding-left: 10px;
+    text-indent: 20px;
+}
+
+#blok3
+{
+    width: 40%;
+    height: 75%;
+    margin: 0;
+    padding: 10px;
+
+    font-size: 130%;
+    background-color: #5f9ea0; 
+    float: right;
+}
+
+#blok3 > h2
+{
+    color: gray;
+}
+
+#blok3 > ul > li
+{
+    text-indent: 10px;
+}
+
+footer
+{
+    width: 100%;
+    display: flex;
+    height: 10%;
+    background-color: gray;
+    background-image: url( gnome.png );
+    background-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+}

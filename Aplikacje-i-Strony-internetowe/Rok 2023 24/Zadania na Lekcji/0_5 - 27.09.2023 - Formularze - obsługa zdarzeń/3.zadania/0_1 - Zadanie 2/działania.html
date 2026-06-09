@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="dialog" name="form">
+
+        <h3>Proste działania</h3>
+
+        <label for="liczba_A">Liczba A &nbsp</label>
+        <input type="text" id="liczba_A"> <br>
+
+        <label for="liczba_B">Liczba B &nbsp</label>
+        <input type="text" id="liczba_B"> <br>
+
+        <input type="button" value="+" onclick="calculate( this.value )" id="but">
+        <input type="button" value="-" onclick="calculate( this.value )" id="but">
+        <input type="button" value="*" onclick="calculate( this.value )" id="but">
+        <input type="button" value="/" onclick="calculate( this.value )" id="but">
+        <input type="button" value="A ^ B" onclick="calculate( this.value )" id="but">
+
+    </form>
+    
+    <p id="wynik"></p>
+
+</body>
+</html>

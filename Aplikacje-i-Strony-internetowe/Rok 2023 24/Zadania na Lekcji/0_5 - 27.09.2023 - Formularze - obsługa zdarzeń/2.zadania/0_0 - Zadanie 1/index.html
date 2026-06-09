@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+
+        <label for="iloscPlyt">Ilość płyt CD/DVD:</label> &nbsp;
+        <input type="text" id="iloscPlyt" name="iloscPlyt" oninput="obliczKoszt()"><br><br>
+        
+        <input type="checkbox" id="opakowanieSlim" name="opakowanieSlim" onchange="obliczKoszt()">
+        <label for="opakowanieSlim">Opakowanie typu slim</label><br><br>
+    
+    </form>
+      
+    <p id="wynik"></p>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+
+table.wazne
+{
+    border-collapse: collapse;
+    border: 2px black solid;
+}
+
+table > tbody > tr > td.podz_przez_trzy
+{
+    border: 1px solid red;
+    background-color: blue;
+}
+
+td.podz_przez_piec
+{
+    border: 1px solid royalblue;
+    background-color: blueviolet;
+}
+
+td
+{
+    background-color: brown;
+    padding: 5px;
+    border: 1px solid gray
+}

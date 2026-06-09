@@ -1,0 +1,96 @@
+/* baner
+gorny1
+gorny2
+gorny3
+glowny
+stopka */
+
+body
+{
+    font-family: Georgia;
+}
+
+#baner
+{
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#gorny1, #gorny2
+{
+    background-color: #A26475;
+    color: white;
+    width: 30%;
+    height: 300px;
+    float: left;
+}
+
+#gorny3
+{
+    background-color: #A26475;
+    color: white;
+    width: 40%;
+    height: 300px;
+    text-align: right;
+    float: left;
+}
+
+#glowny
+{
+    background-color: #F0EAE2;
+    padding: 50px;
+    clear: both;
+}
+
+#stopka
+{
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+table, td, th
+{
+    border: 2px solid #69293A;
+    padding: 7px;
+    border-collapse: collapse;
+}
+
+ul
+{
+    list-style-type: square;
+}
+
+button:nth-child( 2 )
+{
+    background-color: red;
+}
+
+button:nth-child( 3 )
+{
+    background-color: green;
+}
+
+button:nth-child( 4 )
+{
+    background-color: blue;
+}
+
+button
+{
+    width: 20px;
+    height: 20px;
+}
+
+/* 
+
+ Dla pierwszego przycisku: kolor tła czerwony
+Obraz 3. Lista Obraz 4. Tabela
+Strona 4 z 6
+ Dla drugiego przycisku: kolor tła zielony
+ Dla trzeciego przycisku: kolor tła niebieski
+
+*/

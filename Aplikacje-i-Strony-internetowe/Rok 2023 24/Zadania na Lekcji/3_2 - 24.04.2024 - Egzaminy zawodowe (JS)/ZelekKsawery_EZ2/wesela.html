@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styl5.css">
+
+    <title>Dom Weselny</title>
+</head>
+<body>
+
+    <section id="baner">
+
+        <h1>
+            <img src="logo.png" height="70px">
+            Dom Weselny zorganizuje wesele za Ciebie
+            <img src="logo.png" height="70px">
+        </h1>
+
+    </section>
+
+    <section id="lewy">
+
+        <h2>Dom weselny</h2>
+
+        <p>ul. Przemysłowa 5</p>
+        <p>Kalisz</p>
+        <p><a href="logo.png">Pobierz logo</a></p>
+
+    </section>
+
+    <section id="srodkowy">
+
+        <h2>Oferujemy</h2>
+
+        <ul>
+            
+            <li>Wesela</li>
+            <li>Bankiety</li>
+            <li>Konferencje</li>
+
+        </ul>
+
+    </section>
+
+    <section id="prawy">
+
+        <p>
+            <a href="Regulamin.txt">czytaj regulamin</a>
+        </p>
+
+    </section>
+
+    <section id="dolny">
+
+        <h2>Ile będzie mnie kosztowało moje wesele?</h2>
+
+        <script>
+
+            function oblicz()
+            {
+                let wynik = document.getElementById( "wynik" );
+
+                let ile_gosci = document.getElementById( "goscie" ).value;
+                
+                let koszt = ile_gosci * 100;
+                
+                if( document.getElementById( "poprawinyInput" ).checked )
+                {
+                    koszt *= 1.3;
+                }
+
+                if( ile_gosci != "" )
+                {
+                    wynik.innerHTML = ( "Koszt twojego wesela to " + koszt + " złotych" );
+                }
+                else
+                {
+                    wynik.innerHTML = "";
+                }
+            }
+
+        </script>
+
+        <label for="goscie">Podaj liczbę gości: </label>
+        <input type="number" name="goscie" id="goscie"> <br>
+
+        <input type="checkbox" name="poprawiny" id="poprawinyInput">
+        <label for="poprawiny">Wesele z poprawinami?</label> <br>
+
+        <button onclick="oblicz()">Oblicz koszt</button> <br>
+        <p id="wynik"></p>
+
+
+    </section>
+
+    <section id="stopka">Stronę internetową opracował: Ksawery Zelek</section>
+    
+</body>
+</html>

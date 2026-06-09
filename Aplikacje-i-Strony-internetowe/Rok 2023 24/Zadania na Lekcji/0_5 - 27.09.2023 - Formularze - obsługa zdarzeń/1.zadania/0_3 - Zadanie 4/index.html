@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Ksawery Zelek - Zadanie 4</title>
+</head>
+
+<body>
+
+    <form name="form1" method="post">
+
+        <h3>Formularz</h3>
+
+        <!-- Imie -->
+        <label for="imie"> Podaj swoje imię: </label><input type="text" name="imie"><br>
+        <label for="nazwisko"> Podaj swoje nazwisko: </label><input type="text" name="nazwisko"><br><br>
+
+        <!-- Płeć -->
+        <label for="plec">Podaj swoją płeć: <br><br> </label>
+        <input type="radio" name="plec" value="Kobieta">Kobieta
+        &nbsp;
+        <input type="radio" name="plec" value="Mężczyzna">Mężczyzna <br><br>
+
+        <!-- Lat -->
+        <label for="lat"> Ile masz lat? <br><br></label>
+        <input type="radio" name="lat" value="mniej niż 15">mniej niż 15 <br>
+        <input type="radio" name="lat" value="15-19">15-19 <br>
+        <input type="radio" name="lat" value="20-29">20-29 <br>
+        <input type="radio" name="lat" value="30-39">30-39 <br>
+        <input type="radio" name="lat" value="40-60">40-60 <br>
+        <input type="radio" name="lat" value="więcej niż 60">więcej niż 60 <br><br>
+
+        <!-- Muzyka -->
+        <label for="music"> Jaką lubisz muzykę (możesz zaznaczyć więcej możliwości)? <br><br> </label>
+        <input type="checkbox" name="music" multiple value="Rock">Rock <br>
+        <input type="checkbox" name="music" multiple value="Heavy Metal">Heavy Metal <br>
+        <input type="checkbox" name="music" multiple value="Pop">Pop <br>
+        <input type="checkbox" name="music" multiple value="Techno">Techno <br>
+        <input type="checkbox" name="music" multiple value="Muzyka poważna">Muzyka poważna <br>
+        <input type="checkbox" name="music" multiple >Inna (podaj jaka): <input type="text" name="music_1"> <br><br>
+
+        <!-- Przeglądarka -->
+        <label for="browser"> Jakiej przeglądarki internetowej używasz? <br><br> </label>
+        <select name="browser">
+
+            <option value="Explorer">Internet Explorer</option>
+            <option value="Brave">Brave</option>
+            <option value="Mozilla">Mozilla Firefox</option>
+            <option value="Chrome">Chrome</option>
+            <option value="Safari">Safari</option>
+
+        </select> <br><br>
+
+        <!-- SYS -->
+        <label for="OS"> Jakie znasz systemy operacyjne (możesz wybrać kilka opcji trzymając klawisz Ctrl)? <br><br> </label>
+        <select name="OS" multiple size="3">
+
+            <option name="OS" value="DOS">DOS</option>
+            <option name="OS" value="Windows">Windows</option>
+            <option name="OS" value="Linux">Linux</option>
+
+        </select> <br><br>
+
+        <!-- Kom -->
+        <label for="comment"> Podaj swój komentarz: <br><br> </label>
+        <textarea name="comment" cols="50" rows="10">Proszę, wpisz tutaj jakiś komentarz...</textarea> <br><br>
+
+        <!-- send -->
+        <input type="button" name="p1" value="Wyślij formularz" onclick="send( this.form )">
+
+        <!-- reset -->
+        <input type="reset">
+
+    </form>
+    
+</body>
+</html>

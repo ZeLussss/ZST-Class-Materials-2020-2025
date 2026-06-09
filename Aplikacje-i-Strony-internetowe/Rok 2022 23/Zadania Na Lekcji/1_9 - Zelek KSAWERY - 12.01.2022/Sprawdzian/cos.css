@@ -1,0 +1,9 @@
+.a
+{
+    text-decoration: line-through;
+    background-color: lime;
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 3px;
+    text-align: center;
+}

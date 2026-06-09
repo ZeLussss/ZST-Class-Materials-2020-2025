@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html lang="pl">
+	<head>	
+		<title>Formularz</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styl.css" type="text/css" />
+	</head>
+	<body>
+		<div id="kontener">
+        <header>
+				<h1>Formularz</h1>
+			</header>
+			<nav>
+				<ul>
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="formularz.html">Formularz</a></li>
+                    <li><a href="uklady.html">Układy</a></li>
+                    <li><a href="menu_poziom.html">Menu poziome</a></li>
+                </ul>
+			</nav>
+        <main>
+            <h2>Formularz</h2>
+            
+			<form action="">
+				
+				<div class="dane">
+
+					<label for="imie">Imie: </label>
+					<input type="text" id="imie"> <br>
+ 
+					<label for="data">Podaj datę urodzin: </label>
+					<input type="date" id="data"> <br>
+
+					<label for="color">Wybierz ulubiony kolor: </label>
+					<input type="color" id="color"> <br>
+
+					<label for="mail">e-mail:</label>
+					<input type="email" id="mail" value="nazwa@domena.pl"> <br><br>
+
+				</div>
+
+				<div>
+
+					<label for="anty">Jakiego antywirusa używasz w domu?</label> <br>
+					
+					<input type="radio" name="anty">
+					<label for="anty">Avast Free Antywirus</label> <br>
+
+					<input type="radio" name="anty">
+					<label for="anty">Bitefender Total Security</label> <br>
+
+					<input type="radio" name="anty">
+					<label for="anty">Eset Internet Security</label> <br>
+
+					<input type="radio" name="anty">
+					<label for="anty">Kaspersky Internet Security</label> <br>
+
+					<input type="radio" name="anty">
+					<label for="anty">inny</label> <br>
+
+				</div>
+
+				<br>
+				
+				<div class="dane1">
+
+					<label for="hasla">Czy używasz<br>
+					menedżera haseł?</label><br>
+
+					<select name="hasla">
+
+						<option>Tak</option>
+						<option>Nie</option>
+						<option>Może</option>
+
+					</select> <br><br>
+
+				</div>
+
+				<fieldset class="Menedzer">
+					<legend>Menedżery haseł</legend>
+
+					Jeśli używasz, to jaki? <br>
+
+					<input type="checkbox" name="pass">
+					<label for="pass">Dashlane</label> <br>
+
+					<input type="checkbox" name="pass">
+					<label for="pass">1Password</label> <br>
+
+					<input type="checkbox" name="pass">
+					<label for="pass">Roboform</label> <br>
+
+					<input type="checkbox" name="pass">
+					<label for="pass">Keeper</label> <br>
+
+					<input type="checkbox" name="pass">
+					<label for="pass">inny</label> <br>
+
+				</fieldset>
+
+				<br>
+
+				<div>
+
+					<label for="przeg">Jaką przeglądarkę używasz najchętniej?</label> <br>
+
+					<br>
+
+					<select name="browser" class="przeg" size="6"> 
+
+						<option value="Chrome">Chrome</option>
+						<option value="Firefox">Firefox</option>
+						<option value="Opera">Opera</option>
+						<option value="Safari">Safari</option>
+						<option value="Mozilla">Mozilla</option>
+						<option value="Netscape">Netscape</option>
+
+					</select>
+
+					<br><br>
+
+					<div class="uw">
+
+						<label for="uw">Uwagi:</label><br>
+						<textarea name="warning" id="uw" cols="34" rows="5"></textarea>
+					
+					</div>
+
+					<br><br>
+
+					<label for="lang">Języki stron www:</label><br><br>
+					<select name="lang" class="lang" size="5" multiple="true">
+
+						<optgroup label="Front-end" name="lang">
+
+							<option value="HTML">HTML</option>
+							<option value="CSS">CSS</option>
+							<option value="JavaScript">JavaScript</option>
+
+						</optgroup>
+
+						<optgroup label="Back-end" name="lang">
+
+							<option value="PHP">PHP</option>
+							<option value="MySQL">MySql</option>
+							<option value="Python">Python</option>
+
+						</optgroup>
+
+					</select>
+
+					<br><br>
+					
+					<label for="photo">Twoje zdjęcie:</label>
+					<input type="file">
+
+					<br>
+					<label for="ocena">Ocena(1-10)</label>
+					<input type="range">
+
+					<br><br>
+
+					<button type="submit">Wyslij</button>
+					<button type="reset">Wyczyść formularz</button>
+				</div>
+
+			</form>
+        </main>
+        <footer>Copyright &copy; 2022
+            </footer>
+            </div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+kw1: SELECT id, nazwa, opis, zdjecie FROM produkty WHERE id = 18 OR id = 22 OR id = 23 OR id = 25;
+kw2: SELECT id, nazwa, opis, zdjecie FROM produkty WHERE Rodzaje_id = 12;
+kw3: SELECT p.nazwa, r.nazwa FROM produkty p INNER JOIN rodzaje r ON p.Rodzaje_id = r.id WHERE opis LIKE "%Leia%";
+kw4: DELETE FROM produkty WHERE id = 15; 

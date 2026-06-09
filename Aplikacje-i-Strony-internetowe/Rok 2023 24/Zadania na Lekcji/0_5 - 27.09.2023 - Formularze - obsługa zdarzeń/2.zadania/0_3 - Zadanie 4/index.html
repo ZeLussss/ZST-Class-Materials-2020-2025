@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="form">
+
+        <table>
+
+            <tr>
+
+                <td colspan="3">
+                    <input type="number" name="numer_1" id="numer_1" placeholder="1 Liczba">
+                </td>
+
+                <td colspan="3">
+                    <input type="number" name="numer_2" id="numer_2" placeholder="2 Liczba">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="button" name="znak" value="+" onclick="oblicz( '+' )">
+                </td>
+
+                <td>
+                    <input type="button" name="znak" value="-" onclick="oblicz( '-')">
+                </td>
+
+                <td>
+                    <input type="button" name="znak" value="*" onclick="oblicz( '*' )">
+                </td>
+
+                <td style="text-align: right;">
+                    <input type="button" name="znak" value="/" onclick="oblicz( '/' )">
+                </td>
+
+                <td style="text-align: right;">
+                    <input type="button" name="znak" value="%" onclick="oblicz( '%' )">
+                </td>
+
+                <td style="text-align: right;">
+                    <input type="button" name="znak" value="//" onclick="oblicz( '\/\/' )">
+                </td>
+
+            </tr>
+
+            
+        </table>
+        
+    </form>
+    
+    <p id="wynik"></p>
+    
+</body>
+</html>

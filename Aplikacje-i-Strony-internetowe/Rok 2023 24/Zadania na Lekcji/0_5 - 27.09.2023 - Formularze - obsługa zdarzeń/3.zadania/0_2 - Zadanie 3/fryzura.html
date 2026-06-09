@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <ol>
+
+        <form name="form" method="dialog">
+
+            <li>
+                
+                <span>Strzyżenie</span> <br>
+
+                <input type="radio" name="lenght" value="krótkie"> <label for="length">&nbsp Krótkie <br> </label>
+                <input type="radio" name="lenght" value="średnie"> <label for="length">&nbsp Średnie <br> </label>
+                <input type="radio" name="lenght" value="półdługie"> <label for="length">&nbsp Półdługie <br> </label>
+                <input type="radio" name="lenght" value="długie"> <label for="length">&nbsp Długie <br> </label>
+
+            </li>
+
+        </form>
+
+        <li>Czesanie</li>
+
+        <li>Koloryzacja</li>
+
+    </ol>
+
+    <input type="submit" value="Oblicz" onclick="calculate()">
+
+    <p id="wynik"></p>
+
+</body>
+</html>

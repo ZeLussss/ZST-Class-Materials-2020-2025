@@ -1,0 +1,68 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wraper
+{
+    height: 100vh;
+}
+
+.leftPanel
+{
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    width: 50%;
+    height: 40%;
+    background-color: gray;
+    float: left;
+}
+
+.rightPanel
+{
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    background-color: aqua;
+    height: 40%;
+    width: 50%;
+    float: left;
+}
+
+#menu
+{
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 20%;
+    width: 100%;
+    background-color: black;
+    clear: both;
+}
+
+.bottomLeftPanel
+{
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    background-color: blue;
+    height: 40%;
+    width: 50%;
+    float: left;
+}
+
+.bottomRightPanel
+{
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    height: 40%;
+    width: 50%;
+    background-color: beige;
+    float: left;
+}

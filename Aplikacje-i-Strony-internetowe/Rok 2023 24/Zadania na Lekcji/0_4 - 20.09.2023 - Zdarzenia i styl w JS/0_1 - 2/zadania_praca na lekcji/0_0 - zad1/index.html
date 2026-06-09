@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <title>Ksawery Zelek - Zadanie 1</title>
+</head>
+<body>
+
+    <div id="container">
+
+        <nav>
+
+            <div class="button">Home</div>
+
+            <div class="button">Zad.1</div>
+
+            <div class="button" style="clear: both;">Zad.2</div>
+
+        </nav>
+
+        <main>
+
+            <img id="zdj" src="zdjecie_1.jpg" width="80%" height="60%">
+
+        </main>
+
+        <footer>
+
+            <div id="galeria">
+
+                <div class="photo" onclick="displayImg( this )"><img src="zdjecie_1.jpg"></div>
+                <div class="photo" onclick="displayImg( this )"><img src="zdjecie_2.jpg"></div>
+                <div class="photo" onclick="displayImg( this )"><img src="zdjecie_3.jpg"></div>
+                <div class="photo" onclick="displayImg( this )"><img src="zdjecie_4.jpg"></div>
+
+            </div>
+
+            <div id="smile">
+
+                <img id="smieszek" src="smile_1.png" onclick="usmieszek()">
+
+            </div>
+
+        </footer>
+
+    </div>
+    
+</body>
+</html>

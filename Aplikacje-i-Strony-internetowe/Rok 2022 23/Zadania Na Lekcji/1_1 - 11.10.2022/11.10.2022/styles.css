@@ -1,0 +1,82 @@
+body
+{
+    background-color: lightgray;
+}
+
+.container
+{
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.logo
+{
+    font-size: 42px;
+    letter-spacing: 2px;
+    padding: 30px;
+    text-align: center;
+}
+
+#menu
+{
+    margin-top: 20px;
+    color: #000000;
+    padding: 10px;
+}
+
+.option
+{
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 50px;
+    height: 25px;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 2px solid #000000;
+    float:left;
+}
+
+.option:hover
+{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.section
+{
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.zdj
+{
+    padding: 15px;
+}
+
+.tyt
+{
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:link
+{
+    color: black;
+}
+
+a:visited
+{
+    color: black;
+}
+
+a:hover
+{
+    color: black;
+}

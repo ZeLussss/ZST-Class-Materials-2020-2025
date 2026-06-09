@@ -1,0 +1,63 @@
+table
+{
+    border: 2px solid green;
+    border-collapse: collapse;
+}
+
+tr
+{
+    text-align: center;
+}
+
+tr:nth-child( 2n )
+{
+    background-color: yellow;
+}
+
+tr:nth-child( 3n )
+{
+    background-color: aqua;
+}
+
+td
+{
+    border: 1px solid red;
+}
+
+ol
+{
+    width: 400px;
+}
+
+ol > li:nth-child( odd )
+{
+    background-color: yellow;
+}
+
+ol > li:nth-child( even )
+{
+    color: red;
+}
+
+ol
+{
+    list-style-type: upper-roman;
+    color: black;
+}
+
+table#zad5 > tbody > tr
+{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+table#zad5 > tbody > tr:nth-child( 2n )
+{
+    color: blue;
+}
+
+table#zad5 > tbody > tr:nth-child( 3n )
+{
+    color: green;
+}

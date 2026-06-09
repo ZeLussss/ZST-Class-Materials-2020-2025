@@ -1,0 +1,58 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper
+{
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.header
+{
+    width: 100%;
+    height: 20%;
+    background-color: lightpink;
+}
+
+.left
+{
+    width: 33%;
+    height: 60%;
+    background-color: lightskyblue;
+    float: left;
+}
+
+.middle
+{
+    width: 34%;
+    height: 60%;
+    background-color: olive;
+    text-align: center;
+    float: left;
+}
+
+.right
+{
+    width: 33%;
+    height: 60%;
+    background-color: limegreen;
+    float: left;
+}
+
+.footer
+{
+    width: 100%;
+    height: 20%;
+    background-color: mediumslateblue;
+    clear: both;
+}

@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+div.main{
+    align-items: center;
+    border: 25px solid green;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+body{
+    width: fit-content;
+    align-self: center;
+    width: 250px;
+}
+div.geek{
+    font-size: large;
+    text-align: center;
+    background-color: grey;
+    color: green;
+}
+div.science{
+    font-size: small;
+    background-color: grey;
+}

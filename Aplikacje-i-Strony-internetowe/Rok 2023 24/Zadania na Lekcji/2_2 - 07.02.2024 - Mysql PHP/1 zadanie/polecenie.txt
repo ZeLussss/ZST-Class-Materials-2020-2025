@@ -1,0 +1,13 @@
+1. Œci¹gnij plik baza.sql i utwórz bazê danych o nazwie komis
+
+2. Nastêpnie korzystaj¹c ze swojej bazy danych zaimportuj dane z pliku baza.sql.
+
+3. Napisz skrypt w PHP, który umo¿liwi:
+ po³¹czenie z baz¹ danych 
+ wyœwietli zawarte w bazie dane w formie tabelarycznej
+ umo¿liwi dodanie nowych samochodów do bazy za pomoc¹ formularza
+ zamknie po³¹czenie z baz¹ danych
+
+
+
+Zadbaj o odpowiedni¹ obs³ugê b³êdów.

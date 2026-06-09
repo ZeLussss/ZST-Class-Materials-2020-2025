@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #wynik
+        {
+            width: 100px;
+            height: 20px;
+            background-color: #eab676;
+            position: absolute;
+            text-align: center;
+        }
+
+    </style>
+
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form name="post1" method="post">
+
+        <input type="text" name="numer1">
+    
+        <select name="znak" id="znak">
+    
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+    
+        </select>
+    
+        <input type="text" name="numer2"> =&nbsp; <span id="wynik"></span> <br>
+    
+        <br><input type="button" name="p1" value="Oblicz" onclick="oblicz( this.form )">
+
+    </form>
+
+
+</body>
+</html>

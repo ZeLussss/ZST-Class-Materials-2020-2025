@@ -1,0 +1,48 @@
+p
+{
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-variant: normal;
+    color: #0000ff;
+    text-decoration: overline;
+    text-align: center;
+    padding-left: 20px;
+    line-height: 20px;
+    word-spacing: 20px;
+    letter-spacing: 20px;
+}
+
+div
+{
+    font-size: 18px;
+    font-family: Arial, Verdana, Tahoma, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-variant: small-caps;
+    text-decoration: none;
+    text-transform: none;
+    text-align: left;
+    padding-left: 18px;
+    line-height: 18px;
+    word-spacing: 18px;
+    letter-spacing: 18px;
+}
+
+span
+{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: 500;
+    font-variant: normal;
+    color: #ff00ff;
+    text-decoration: line-through;
+    text-transform: normal;
+    text-align: right;
+    padding-left: 16px;
+    line-height: 16px;
+    word-spacing: 16px;
+    letter-spacing: 16px;
+}

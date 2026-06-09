@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Sprawdź cenę swojej wizyty</h2>
+
+    <form name="form" method="dialog">
+
+        <input type="checkbox" name="typ" value="Piling"> <label for="typ">Piling</label> <br>
+        <input type="checkbox" name="typ" value="Maska"> <label for="typ">Maska</label> <br>
+        <input type="checkbox" name="typ" value="Masaż"> <label for="typ">Masaż twarzy</label> <br>
+        <input type="checkbox" name="typ" value="Regulacja"> <label for="typ">Regulacja brwi</label> <br><br>
+
+        <input type="submit" value="Sprawdź cenę" onclick="calculate()"> <br><br><br>
+
+    </form>
+
+    <p id="wynik"></p>
+    
+</body>
+</html>

@@ -1,0 +1,4 @@
+kw1: SELECT imie, nazwisko, opis, zdjecie FROM osoby WHERE (Hobby_id = 1) OR (Hobby_id = 2) OR (Hobby_id = 6);
+kw2: SELECT o.id, o.nazwisko, h.nazwa FROM osoby o INNER JOIN hobby h ON o.Hobby_id = h.id WHERE o.rok_urodzenia > 2000;
+kw3: SELECT o.id, o.zdjecie FROM osoby o WHERE imie = "Monika" LIMIT 5;
+kw4: CREATE TABLE wpisy( id int AUTO_INCREMENT PRIMARY KEY NOT NULL, wpis text, uzytkownik_id int unsigned NOT NULL ); 

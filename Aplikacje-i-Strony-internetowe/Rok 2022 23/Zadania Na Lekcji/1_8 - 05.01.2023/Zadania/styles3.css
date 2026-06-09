@@ -1,0 +1,29 @@
+.box1
+{
+    width: 600px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 45px solid green;
+}
+
+.box2
+{
+    width: 410px;
+    height: 100px;
+    background-color: #C5C5DB;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.box-x
+{
+    width: max-content;
+    height: 150px;
+}
+
+h1.box2
+{
+    font-size: 50px;
+    margin-bottom: 0px;
+}

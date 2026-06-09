@@ -1,0 +1,96 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 150%;
+    
+}
+
+.middle
+{
+    text-align: right;
+    margin-left: -15%;
+}
+
+.full
+{
+    width: 100%;
+    text-align: center;
+}
+
+table.full > tbody > tr > td > p
+{
+    text-align: left;
+}
+
+form
+{
+    padding: 40px;
+}
+
+p
+{
+    border-bottom: 2px solid #466750;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+td.left
+{
+    text-align: left;
+    padding-left: 2px;
+}
+
+#sub, #res
+{
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20%;
+    margin-left: 5%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub:hover, #res:hover
+{
+    cursor: pointer;
+}
+
+#wynik
+{
+    width: 50%;
+    background-color: rgb(223, 221, 221);
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 80%;
+    background-color: rgb(217, 226, 230);
+    animation: ease;
+}
+
+#cont
+{
+    width: 100%;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+#list
+{
+    width: 100%;
+    background-color: rgb(250, 75, 75);
+}
+
+#text
+{
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    padding: 10px;
+    padding-left: 30px;
+}

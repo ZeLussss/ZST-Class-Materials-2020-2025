@@ -1,0 +1,18 @@
+.error
+{
+    color: red;
+}
+
+table
+{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+tr > td
+{
+    border: 1px solid black;
+    padding: 5px;
+    background-color: beige;
+    text-align: center;
+}

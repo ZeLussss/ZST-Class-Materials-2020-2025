@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        table
+        {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th
+        {
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+            font-weight: bold;
+        }
+
+        td
+        {
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+        }
+
+    </style>
+
+    <title>Zadanie 1</title>
+</head>
+
+<body>
+
+    <div class="title">
+
+        <span>ZADANIE 1</span>
+
+    </div>
+
+    <div class="center">
+
+        <table>
+
+            <tr>
+
+                <th colspan="7">WIDEO</th>
+
+            </tr>
+
+            <tr>
+
+                <th>Format</th>     <th colspan="2">Opis</th>   <th colspan="3">VIDEO</th>      <th>Stan</th>
+
+            </tr>
+
+            <tr>
+
+                <td>AVI</td>    <td colspan="2">AVI (Audio Video Interleave). Developed by Microsoft. Commonly used in video cameras and TV hardware. Plays well on Windows computers, but not in web browsers.</td>      <td colspan="3"><video width="720" controls><source src="AVI.avi" type="video/avi"></video></td>   <td>Nie Działa</td>
+
+            </tr>
+
+            <tr>
+
+                <td>MOV</td>   <th colspan="2">EMBED!</th>   <td colspan="3"><embed type="video/mov" src="MOV.mov" width="720"></td>   <td>Nie działa</td>
+
+            </tr>
+
+            <tr>
+
+                <td>MP4</td>   <td colspan="2">MP4. Developed by the Moving Pictures Expert Group. Commonly used in video cameras and TV hardware. Supported by all browsers and  recommended by YouTube. </td>   <td colspan="3"><video width="720" controls><source src="MP4.mp4" type="video/mp4"></video></td>   <td>Działa</td>
+
+            </tr>
+
+            <tr>
+
+                <td>OGG</td>   <td colspan="2">Theora Ogg. Developed by the Xiph.Org Foundation. Supported by HTML.</td>   <td colspan="3"><video width="720" controls><source src="OGG.ogg" type="video/ogg"></video></td>   <td>Działa</td>
+
+            </tr>
+
+            <tr>
+
+                <td>WMV</td>   <th colspan="2">OBJECT!</th>   <td colspan="3"><object data="" width="720"></object></td>   <td>Nie działa</td>
+
+            </tr>
+
+            <tr>
+
+                <td>WEBM</td>   <td colspan="2">WebM. Developed by Mozilla, Opera, Adobe, and Google. Supported by HTML.</td>   <td colspan="3"><video width="720" controls><source src="WEBM.webm" type="video/webm"></video></td>   <td>Działa</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="center">
+
+        <p>Muzyczka - Bez niczego</p>
+
+        <iframe width="500" height="395"
+
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+
+        </iframe>
+
+        <p>Muzyczka - Autoplay + Mute</p>
+
+        <iframe width="500" height="395"
+
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+        
+        </iframe>
+
+        <p>Muzyczka - Loop</p>
+
+        <iframe width="500" height="395"
+
+            src="https://www.youtube.com/embed/3mfTB5wLTtg?loop=1">
+        
+        </iframe>
+
+        <p>Muzyczka - Controls</p>
+
+        <iframe width="500" height="395"
+
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+        
+        </iframe>
+        
+    </div>
+
+    <div class="center">
+
+        <p>Spokojne Audio</p>
+
+        <audio src="videoplayback.m4a" type="audio/x-m4a" controls></audio>
+
+    </div>
+
+    <div class="links">
+
+        <a href="GŁÓWNA.html">Strona Główna | </a>
+
+        <a href="Zadanie1.html">Zadanie | </a>
+
+        <a href="Zadanie2.html">Zadanie1 | </a>
+
+        <a href="Zadanie3.html">Zadanie2 | </a>
+
+        <a href="Zadanie4.html">Zadanie3</a>
+
+    </div>
+
+    <div class="autor">
+
+        <span>Ksawery Zelek 3TI</span>
+
+    </div>
+
+</body>
+</html>

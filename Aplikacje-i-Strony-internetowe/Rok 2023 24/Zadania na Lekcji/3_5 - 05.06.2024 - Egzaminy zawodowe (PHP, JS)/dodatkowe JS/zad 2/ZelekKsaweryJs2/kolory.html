@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styl2.css">
+
+    <script>
+
+        function uruchomSkrypt( form )
+        {
+            let H = Number( form.H.value );
+
+            let kolor1 = document.getElementById( "kolor1" );
+            let kolor2 = document.getElementById( "kolor2" );
+            let kolor3 = document.getElementById( "kolor3" );
+            let kolor4 = document.getElementById( "kolor4" );
+            let kolor5 = document.getElementById( "kolor5" );
+
+            let kol1 = "hsl( " + H + ", 100%, 50% )";
+            let kol2 = "hsl( " + H + ", 80%, 50% )";
+            let kol3 = "hsl( " + H + ", 60%, 50% )";
+            let kol4 = "hsl( " + H + ", 40%, 50% )";
+            let kol5 = "hsl( " + H + ", 20%, 50% )";
+
+            kolor1.style.backgroundColor = kol1;
+            kolor2.style.backgroundColor = kol2;
+            kolor3.style.backgroundColor = kol3;
+            kolor4.style.backgroundColor = kol4;
+            kolor5.style.backgroundColor = kol5;
+
+            console.log( "1 | ", H );
+        }
+
+    </script>
+
+    <title>Pomocnik CSS</title>
+
+</head>
+<body>
+
+    <section id="kontener">
+
+        <section id="baner1">
+
+            <h1>Pomocnik CSS</h1>
+
+        </section>
+
+        <section id="baner2">
+
+            <ul>
+
+                <a href="kolory.html">
+                    <li>Kolory</li>
+                </a>
+
+                <a href="czcionki.html">
+                    <li>Czcionki</li>
+                </a>
+
+                <a href="style.html">
+                    <li>Style CSS</li>
+                </a>
+
+                <a href="https://www.w3schools.com/css/" target="_blank">
+                    <li>Pomoc</li>
+                </a>
+
+            </ul>
+
+        </section>
+
+        <section id="glowny">
+
+            <h2>Podaj składową H koloru w kodzie HSL</h2>
+
+            <p>0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+
+            <img src="kolory.jpg" alt="Przestrzeń barw HSL">
+
+            <form action="" method="dialog">
+
+                <input type="number" name="H" max="360" min="0" placeholder="0 - 360">
+    
+                <button onclick="uruchomSkrypt( this.form )">Generuj paletę</button>
+
+            </form>
+
+            <table>
+
+                <tr>
+
+                    <td colspan="4" id="kolor1">Kolor główny</td>
+                    
+                </tr>
+
+                <tr>
+
+                    <td id="kolor2">Kolor2</td>
+                    <td id="kolor3">Kolor3</td>
+                    <td id="kolor4">Kolor4</td>
+                    <td id="kolor5">Kolor5</td>
+
+                </tr>
+
+            </table>
+
+
+        </section>
+
+        <section id="stopka">
+
+            <p>Autor: Ksawery Zelek</p>
+
+        </section>
+
+    </section>
+    
+</body>
+</html>

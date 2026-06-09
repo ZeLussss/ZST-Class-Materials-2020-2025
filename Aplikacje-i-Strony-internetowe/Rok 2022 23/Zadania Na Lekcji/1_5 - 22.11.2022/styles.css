@@ -1,0 +1,42 @@
+.tytul
+{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.links
+{
+    text-align: center;
+    font-size: 25px;
+    padding: 30px;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover
+{
+    font-weight: bold;
+}
+
+.artykul
+{
+    padding: 30px;
+    text-align: center;
+}
+
+.kolorek 
+{
+    color: green;
+}
+
+div > p
+{
+    color: red;
+}
+

@@ -1,0 +1,219 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#banner
+{
+    width: 100%;
+    height: 20%;
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+#banner > h1
+{
+    background-color: white;
+    padding: 15px 50px 15px 50px;
+    font-weight: 600;
+}
+
+/* FORMULARZ */
+
+#formularz
+{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    flex-grow: 2;
+    flex-wrap: wrap;
+}
+
+
+/* DANE UŻYTKOWNIKA */
+
+table
+{
+    border-collapse: collapse;
+}
+
+#info_user
+{
+    width: 50%;
+    height: 60%;
+    background-color: #e6ebef;
+    padding: 5px 0px 15px 30px; 
+    flex-wrap: wrap;
+}
+
+#info_user > table > tbody > tr > th
+{
+    text-align: right;
+}
+
+#info_user > table > tbody > tr > th#radio
+{
+    text-align: right;
+    font-weight: lighter;
+    padding: 0px 15px 5px 0px;
+}
+
+#info_user > table > tbody > tr > td > input
+{
+    width: 25vh;
+}
+
+#info_user > table > tbody > tr > td > select
+{
+    width: 26vh;
+}
+
+#info_user > table
+{
+    display: flex;
+    justify-content: right;
+    padding: 0px 10vh;
+}
+
+#radio
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    width: 100vh;
+    padding: 0px;
+}
+
+#radio-block
+{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+tr.not_avaiable
+{
+    background-color: white;
+    color: #cccdce;
+    padding: 5px;
+}
+
+
+/* DANE DO LOGOWANIA */
+
+#login
+{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 62%;
+    background-color: #f5f5f5;
+    padding: 5px 15px 5px 15px;
+    justify-content: left;
+}
+
+
+#table-login > tbody > tr > th
+{
+    font-weight: lighter;
+    text-align: right;
+    width: 200px;
+}
+
+#for_regulamin
+{
+    display: flex;
+    justify-content: right;
+    height: 100%;
+    align-items: flex-end;
+}
+
+
+/* REGISTER */
+
+#register
+{
+    width: 100%;
+    margin-top: 15px;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e6ebef;
+}
+
+#table-register
+{
+    display: flex;
+    justify-content: right;
+    padding: 50px 70px;   
+}
+
+#table-register > tbody > tr > th
+{
+    text-align: right;
+}
+
+#table-end
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #e6ebef;
+}
+
+#table-end > tbody > tr
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#table-end > tbody > tr > td
+{
+    padding: 10px;
+}
+
+#table-end > tbody > tr > td:nth-child( even )
+{
+    padding-right: 70px;
+
+}
+
+#submit
+{
+    display: block;
+    box-sizing: border-box;
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-color: #b6b3b1;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#submit:hover
+{
+    background-color: #8b8a89;
+}
+
+.important
+{
+    color: red;
+}

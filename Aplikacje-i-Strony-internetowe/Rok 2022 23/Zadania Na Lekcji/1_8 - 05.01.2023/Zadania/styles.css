@@ -1,0 +1,83 @@
+body
+{   
+    background-color: gainsboro;
+}
+
+.container
+{
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.title
+{
+    width: 100%;
+    background-color: lightgray;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    letter-spacing: 2px;
+}
+
+.nav
+{
+    width: 700px;
+    background-color: lightgray;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding: 15px;
+}
+
+.table1
+{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.table1 td
+{
+    padding: 10px;
+    background-color: lightgray;
+}
+
+.table1 td:hover
+{
+    background-color: rgb(160, 158, 158);
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.footer
+{
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgray;
+    margin-top: 20px;
+}
+
+.main
+{
+    width: 100px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+}

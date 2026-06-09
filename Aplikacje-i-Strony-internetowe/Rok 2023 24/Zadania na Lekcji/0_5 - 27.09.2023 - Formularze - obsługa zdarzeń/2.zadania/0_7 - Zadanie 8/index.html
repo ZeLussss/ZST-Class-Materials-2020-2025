@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="script.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="dialog" name="form">
+
+        <table>
+    
+            <tr>
+                <td>
+    
+                    <label for="normal">Ilość biletów normalnych: </label>
+    
+                </td>
+    
+                <td>
+    
+                    <input type="text" name="normal"> 
+    
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+    
+                    <label for="ulga">Ilość biletów ulgowych: </label>
+    
+                </td>
+    
+                <td>
+    
+                    <input type="text" name="ulga">
+                
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+    
+                    <label for="time">Ilość godzin: </label>
+    
+                </td>
+    
+                <td>
+    
+                    <input type="text" name="time">
+    
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+    
+                    <input type="checkbox" name="bigfamily">
+                    
+                    <label for="bigfamily">Karta dużej rodziny </label>
+    
+                </td>
+            
+            </tr>
+    
+            <tr>
+                <td colspan="2">
+    
+                    <input type="submit" value="Oblicz" style="float: right;" onclick="oblicz( this.form )">
+    
+                </td>
+            </tr>
+    
+        </table>
+
+    </form>
+
+    <br>
+
+    <div id="wynik"></div>
+
+
+</body>
+</html>

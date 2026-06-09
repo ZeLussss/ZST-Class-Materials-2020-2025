@@ -1,0 +1,23 @@
+body
+{
+    background-color: #4682b6;
+    color: white;
+}
+
+ol
+{
+    list-style-type: decimal;
+    color: white;
+}
+
+/* li:nth-child( 1 )
+{
+    text-decoration: underline;
+} */
+
+span
+{
+    text-decoration: underline;
+    color: #383276;
+}
+

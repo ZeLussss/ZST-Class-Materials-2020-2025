@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="wynik">
+
+    </div>
+
+    <form name="form" method="dialog" onsubmit="potwierdz( this.form ); return false;" onreset="resetuj( this.form )">
+
+        <table onclick="zmiana_2()">
+
+            <tr>
+                
+                <td colspan="2" class="middle">
+                    <label for="email">e-mail:</label>
+                </td>
+
+                <td colspan="2">
+                    <input type="text" name="email" id="emailInput">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <input type="checkbox" name="newsteler" id="newstelerInput">
+                    <label for="newsteler">&nbsp; Zapisać sie na newsteler?</label>
+                </td>
+                
+            </tr>
+
+            <tr>
+                
+                <td>
+                    <input type="radio" name="dane_os" id="daneInput">
+                    <label for="dane_os">&nbsp; Zgoda na przetwarzanie danych osobowych</label>
+                </td>
+
+            </tr>
+            
+        </table>
+
+        <table class="full" onclick="zmiana_2()">
+
+            <tr>
+
+                <td>
+                    <p>Zainteresowania:</p>
+                </td>
+
+            </tr>
+
+        </table>
+
+        <table class="middle" style="width: 50%;" onclick="zmiana_2()">
+
+            <tr>
+
+                <td colspan="2" class="middle">
+                    <label for="Interests">Biznes</label>
+                </td>
+
+                <td colspan="2" class="left">
+                    <input type="checkbox" name="Interests" value="Biznes" id="Interests">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2" class="middle">
+                    <label for="Interests">Nauka</label>
+                </td>
+
+                <td colspan="2" class="left">
+                    <input type="checkbox" name="Interests" value="Nauka" id="Interests">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2" class="middle">
+                    <label for="Interests">Sport</label>
+                </td>
+
+                <td colspan="2" class="left">
+                    <input type="checkbox" name="Interests" value="Sport" id="Interests">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2" class="middle">
+                    <label for="Interests">Polityka</label>
+                </td>
+
+                <td colspan="2" class="left">
+                    <input type="checkbox" name="Interests" value="Polityka" id="Interests">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2" class="middle">
+                    <label for="Interests">Rozrywka</label>
+                </td>
+
+                <td colspan="2" class="left">
+                    <input type="checkbox" name="Interests" value="Rozrywka" id="Interests">
+                </td>
+
+            </tr>
+
+        </table>
+
+        <table class="full">
+
+            <tr>
+
+                <td>
+                    <p>Napisz wiadomość (max.20 znaków)</p>
+                </td>
+            
+            </tr>
+
+            <tr>
+
+                <td class="full">
+                    <textarea name="message" id="message" cols="50" rows="5" maxlength="20" oninput="howMany( this.value.length )"
+                    onclick="zmiana_1()"></textarea>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td id="howManyLetters"> </td>
+
+            </tr>
+
+        </table>
+
+        <table onclick="zmiana_2()">
+
+            <tr>
+
+                <td>
+                    <input type="submit" id="sub" value="Wyślij dane">
+                </td>
+
+                <td>
+                    <input type="reset" id="res" value="Wyczyść formularz">
+                </td>
+
+            </tr>
+
+       </table>
+
+
+    </form>
+    
+</body>
+</html>

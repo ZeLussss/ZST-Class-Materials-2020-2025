@@ -1,0 +1,9 @@
+input - Input reprezentuje elementy przez określenie typu danego pola. Zazwyczaj używamy go po to, aby pobrać dane od użytkownika. Można przypisać mu typ: radio, checkbox, reset, submit, text, password, file, date, email, hidden, time, week, search, url, date-time, date-timelocal, url, tel . Możemy dopisać jego name, czyli jego nazwę. Przydatną funkcją będzie tabinxdex, który przekaże systemowi numer indeksu taba, i będzie ruszał się w takiej kolejności, w jakiej został zapisany.
+
+radio - Typ radio określa typ danego pola w inpucie. Jest to kropka (domyślnie), którą (jeżeli inne radio mają ten sam name) możemy zaznaczyć pojedyńczo. Zazwyczaj używamy tego jeżeli chcemy pobrać od użytkownika dane o jego wieku (przykład) kiedy jest tylko jedna możliwość.  Możemy dodać do niego: name, value, disabled, checked, tabindex, style, class.
+
+checkbox - Typ checkbox określa typ danego pola w inpucie. Jest to kwadrat (domyślnie), który możemy wybrać kilka razy (nawet kiedy mają ten sam name) Zazwyczaj używamy tego jeżeli chcemy pobrać od użytkownika dane o jego ulubionych rzeczach (przykład) ponieważ może mieć kilka ulubionych rzeczy, np. Typ ulubionej muzyki -pop -rap - trap. Możemy dodać do niego: name, value, disabled, checked, tabindex, style, class.
+
+action - używamy tego polecenia w formie (form), który używamy do określenia jaką akcje (co chcemy zrobić) z danym formularzem tuż po jego zakończeniu (przykład). Używamy go wtedy, kiedy korzystamy ze skryptów PHP.
+
+enctype - enctype określa nam rodzaj danej "rzeczy" z jakiej będziemy korzystać. Jako przykład mogę podać enctype="multipart/form-data" który będzie pozwalał użytkownikowi wybrać plik, jaki chce.

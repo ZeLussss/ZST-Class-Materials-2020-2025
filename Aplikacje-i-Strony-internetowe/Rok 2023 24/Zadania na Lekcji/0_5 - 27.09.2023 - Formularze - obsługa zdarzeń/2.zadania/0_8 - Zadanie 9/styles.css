@@ -1,0 +1,20 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#lewy
+{
+    height: 100vh;
+    padding: 10px;
+    float: left;
+}
+
+#prawy
+{
+    height: 100vh;
+    float: right;
+}

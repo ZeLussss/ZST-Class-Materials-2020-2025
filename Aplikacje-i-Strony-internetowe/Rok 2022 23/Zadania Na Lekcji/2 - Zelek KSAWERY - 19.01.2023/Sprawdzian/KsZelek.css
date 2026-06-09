@@ -1,0 +1,10 @@
+.box
+{
+    height: 200px;
+    width: 300px;
+    margin-left: 30px;
+    padding-right: 30px;
+    border: 4px dashed red;
+    box-sizing: border-box;
+    overflow: hidden;
+}

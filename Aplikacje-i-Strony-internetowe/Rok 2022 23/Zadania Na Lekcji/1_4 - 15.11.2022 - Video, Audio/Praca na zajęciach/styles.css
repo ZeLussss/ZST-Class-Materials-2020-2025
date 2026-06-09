@@ -1,0 +1,41 @@
+.title
+{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px;
+}
+
+.title1
+{
+    font-size: 25px;
+    padding: 30px;
+    text-align: center;
+}
+
+.center
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.links
+{
+    font-size: 20px;
+    text-align: center;
+    padding: 25px;
+}
+
+.autor
+{
+    font-size: 30px;
+    text-align: center;
+    border: 3px solid black;
+    padding: 35px;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}

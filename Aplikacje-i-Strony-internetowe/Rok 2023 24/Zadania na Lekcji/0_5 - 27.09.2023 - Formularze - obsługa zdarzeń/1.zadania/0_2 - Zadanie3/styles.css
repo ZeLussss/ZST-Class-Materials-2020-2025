@@ -1,0 +1,56 @@
+*
+{
+    box-sizing: border-box;
+}
+
+#dane
+{
+    display: flex;
+    padding: 10px;
+    border: 1px solid black;
+    width: 40%;
+    background-color: deepskyblue; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+#dane > input
+{
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.blok
+{
+    display: block;
+    
+}
+
+#wynik
+{
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    width: 40%;
+    height: 80px;
+    margin-top: 10px;
+    background-color: dodgerblue; 
+    flex-wrap: wrap;
+}
+
+#wynik > span
+{
+    font-size: 110%;
+    color: yellow;
+    text-align: left;
+}
+
+#tu
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}

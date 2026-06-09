@@ -1,0 +1,51 @@
+*{
+    font-family: Helvetica;
+}
+.LEWY{
+    background-color: navy;
+    color: white;
+    height: 700px;
+    width: 25%;
+    float: left;
+}
+.P1{
+    background-color: royalblue;
+    height: 100px;
+    width: 75%;
+    text-align: center;
+    float: left;
+}
+.P2{
+    background-color: steelblue;
+    height: 300px;
+    width: 75%;
+    float: left;
+}
+.P3{
+    background-color: royalblue;
+    height: 300px;
+    width: 75%;
+    text-align: center;
+    float: left;
+}
+h1{
+    margin: 5px;
+}
+footer{
+    background-color: steelblue;
+    text-align: center;
+    padding: 20px;
+    float: left;
+    clear: both;
+    width: 100%;
+}
+form{
+    margin: 30px;
+    line-height: 3;
+}
+form:hover{
+    background-color: deepskyblue;
+}
+h1{
+    letter-spacing: 1px;
+}

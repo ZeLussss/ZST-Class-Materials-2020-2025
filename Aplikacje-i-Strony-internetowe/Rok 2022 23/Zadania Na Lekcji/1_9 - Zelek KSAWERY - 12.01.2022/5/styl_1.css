@@ -1,0 +1,46 @@
+*
+{
+    font-family: Georgia;
+}
+
+.baner
+{
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.main
+{
+    background-color: lightblue;
+    padding: 100px;
+}
+
+.left
+{
+    background-color: dodgerblue;
+    width: 20%;
+    height: 220px;
+    float: left;
+}
+
+.middle
+{
+    background-color: dodgerblue;
+    color: white;
+    width: 40%;
+    height: 220px;
+    text-align: center;
+    float: left;
+}
+
+.right
+{
+    background-color: dodgerblue;
+    color: white;
+    width: 40%;
+    height: 220px;
+    text-align: center;
+    float: left;
+}

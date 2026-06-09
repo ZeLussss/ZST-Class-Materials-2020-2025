@@ -1,0 +1,127 @@
+table
+{
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+table > tbody > tr > th
+{
+    background-color: lightcoral;
+    color: blue;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+    width: 150px;
+}
+
+table > tbody > tr > td
+{
+    color: brown;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+
+
+/* -------------------------- */
+
+a
+{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    transition: ease-in;
+}
+
+ol
+{
+    list-style-type: none;
+}
+
+li
+{
+    width: 150px;
+    height: 25px;
+    background-color: brown;
+    color: white;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+
+/* --------------------------  DLA STRONY */
+
+#all
+{
+    border: 2px solid blue;
+}
+
+#logo
+{
+    border: 2px solid brown;
+    margin: 10px;
+}
+
+#menu
+{
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2
+{
+    font-size: 75%;
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#banner
+{
+    text-align: center;
+}
+
+#photos
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#srodek
+{
+    padding-left: 15px;
+}
+
+#srodek > p
+{
+    text-indent: 50px;
+}
+
+img#tablica
+{
+    scale: 15%;
+    margin: 0;
+    padding: 0;
+}
+
+#srodek
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+

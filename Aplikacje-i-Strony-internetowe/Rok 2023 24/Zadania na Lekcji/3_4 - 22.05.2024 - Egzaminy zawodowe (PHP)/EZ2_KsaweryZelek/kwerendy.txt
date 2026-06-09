@@ -1,0 +1,4 @@
+kw1: SELECT id, nazwa, opis, cena FROM podzespoly WHERE cena < 1000;
+kw2: SELECT p.nazwa, p.opis FROM podzespoly p INNER JOIN producenci prod ON prod.id = p.producenci_id WHERE dostepnosc = 1 AND prod.nazwa = "Intel";
+kw3: SELECT p.nazwa, prod.nazwa FROM podzespoly p INNER JOIN producenci prod ON prod.id = p.producenci_id;  
+kw4: UPDATE producenci SET nazwa = "PATRIOT" where nazwa = "Patriot"; 

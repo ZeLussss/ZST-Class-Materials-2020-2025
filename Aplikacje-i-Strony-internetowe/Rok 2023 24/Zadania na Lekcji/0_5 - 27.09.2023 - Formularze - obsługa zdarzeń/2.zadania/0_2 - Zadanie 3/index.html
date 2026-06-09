@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="script.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <form name="form">
+
+        <label for="ilosc">Ilość kilometrów &nbsp;</label>
+        <input type="text" name="ilosc" placeholder="Ilość kilometrów" min="1" oninput="getAndUpdate_km( this.form )"><br><br>
+
+        <input type="checkbox" name="potw" onchange="getAndUpdate_tarnow( this.form )"> <label for="potw">Jestem z tarnowa</label> <br><br>
+
+    </form>
+
+    <p id="wynik"></p>
+
+</body>
+</html>

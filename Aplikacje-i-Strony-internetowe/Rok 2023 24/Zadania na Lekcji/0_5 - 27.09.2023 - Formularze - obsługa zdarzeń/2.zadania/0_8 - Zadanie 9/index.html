@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="lewy">
+
+        <!-- Tło -->
+        <h2>Kolor tła</h2>
+
+        <form name="form" method="dialog">
+            <input type="submit" value="Niebieski" onclick="changeBackgroundColor( this.value )">
+
+            <input type="submit" value="Żółty" onclick="changeBackgroundColor( this.value )">
+
+            <input type="submit" value="Zielony" onclick="changeBackgroundColor( this.value )">
+        </form>
+
+        <!-- Czcionka -->
+        <h2>Kolor czcionki</h2>
+
+        <form name="form" method="dialog">
+
+            <select name="fontColor" onchange="changeFontColor( this.value )">
+
+                <option value="black">Czarny</option>
+
+                <option value="white">Biały</option>
+
+                <option value="brown">Brązowy</option>
+
+            </select>
+
+        </form>
+
+        <!-- Rozmiar czczionki -->
+        <h2>Rozmiar czcionki</h2>
+
+        <form name="form" method="dialog">
+
+            <input type="text" id="font-size" placeholder="Wpisz rozmiar czcionki" value="100%" onblur="changeFontSize()">
+
+        </form>
+        
+        <!-- Obramowanie -->
+        <h2>Obramowanie</h2>
+
+        <form name="form" method="dialog">
+
+            <input type="checkbox" id="borderCheck" onchange="rysujObramowanie()"> &nbsp; <label for="borderCheck">Rysuj Ramkę</label>
+
+        </form>
+
+        <!-- Punktator listy -->
+        <h2>Punktator listy</h2>
+
+        <form name="form" method="dialog">
+
+            <input type="radio" name="type_list" value="disc" onclick="changeTypeList( this.value )"> &nbsp Dysk <br>
+            <input type="radio" name="type_list" value="square" onclick="changeTypeList( this.value )"> &nbsp Kwadrat <br>
+            <input type="radio" name="type_list" value="circle" onclick="changeTypeList( this.value )"> &nbsp Koło <br>
+
+        </form>
+
+    </div>
+
+    <div id="prawy">
+
+        <img src="1.jpg" style="width: 20%" id="image">
+
+        <h2>Lista zakupów</h2>
+        
+        <ul id="lista-zakupowa">
+            <li>Chleb</li>
+
+            <li>Masło</li>
+
+            <li>Wędlina</li>
+
+            <li>Pomidor</li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.uncategorized
+{
+    text-align: center;
+    color: crimson;
+    text-decoration: underline;
+    margin: 20px;
+}
+
+.weight-max
+{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 34px;
+    margin: 20px;
+}
+
+.small
+{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.close
+{
+    color: gray;
+    margin: 50px;
+}
+
+.wraper
+{
+    background-color: bisque;
+    align-content: center;
+    padding-top: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.first
+{
+    font-size: 20px;
+    padding: 5%;
+    align-self: center;
+}
+
+.reply
+{
+    padding: 10%;
+    font-weight: bolder;
+    align-self: center;
+}
+
+.comments
+{
+    font-size: larger;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.comment
+{
+    padding-bottom: 30px;
+}
+
+.date
+{
+    color: gray;
+}
+
+.roz
+{
+    text-decoration: underline;
+    color: crimson;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Ksawery Zelek - Zadanie 3</title>
+</head>
+
+<body>
+
+    <form name="form1" method="post">
+
+        <div id="dane">
+
+            <table>
+
+                <tr>
+
+                    <td>Podaj liczbę dorosłych:</td>
+
+                    <td>
+                        <input class="x" type="text" name="liczbDoros">
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Podaj liczbę dzieci:</td>
+
+                    <td>
+                        <input class="x" type="text" name="liczbDziec">
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Podaj liczbę dni:</td>
+
+                    <td>
+                        <input class="x" type="text" name="liczbDni">
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td colspan="2" style="text-align: right;">
+                        <input type="button" name="p1" value="Oblicz" onclick="oblicz( this.form )">
+                    </td>
+
+                </tr>
+
+            </table>
+            
+        </div>
+
+        <div id="wynik">
+
+            <span>Koszt pobytu wynosi:</span>
+
+            <div id="tu"></div>
+
+        </div>
+
+    </form>
+
+</body>
+</html>

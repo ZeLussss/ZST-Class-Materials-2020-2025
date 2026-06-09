@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styl9.css">
+
+    <title>Fabryka żelków</title>
+</head>
+<body>
+
+    <section id="gorny1">
+
+        <a href="index.html">
+
+            <img src="logo.png" alt="logo fabryki">
+
+        </a>
+
+    </section>
+
+    <section id="gorny2">
+
+        <a href="zamowienie.html" id="zamowienie">Zamówienie</a>
+
+    </section>
+
+    <section id="baner">
+
+        <h2>Zamów nasz produkt</h2>
+
+    </section>
+
+    <section id="lewy">
+
+        <h1>Oferta</h1>
+
+        <table>
+
+            <tr>
+                <td>Kształty</td>
+                <td>Kolory</td>
+            </tr>
+
+            <tr>
+                <td>
+
+                    <ul>
+                        <li>miś</li>
+                        <li>żabka</li>
+                        <li>serce</li>
+                    </ul>
+
+                </td>
+                <td>
+
+                    <ol>
+                        <li>czerwony</li>
+                        <li>niebieski</li>
+                        <li>żółty</li>
+                        <li>inny</li>
+                    </ol>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section id="prawy">
+
+        <label for="num">Podaj numer kształtu: </label> <br>
+        <input type="number" id="num" name="num"> <br>
+
+        skomponuj swój kolor, podaj RGB: <br>
+        R: <input type="number" id="rgb-R" name="rgb-R">
+        G: <input type="number" id="rgb-G" name="rgb-R">
+        B: <input type="number" id="rgb-B" name="rgb-B"> <br>
+
+        <script>
+
+            function zamowKolor()
+            {
+                let wybrany_kształt;
+
+                let input_kształt, input_rgb_R, input_rgb_G, input_rgb_B;
+                input_kształt   = document.getElementById( "num" ).value;
+                input_rgb_R     = document.getElementById( "rgb-R" ).value;
+                input_rgb_G     = document.getElementById( "rgb-G" ).value;
+                input_rgb_B     = document.getElementById( "rgb-B" ).value;
+
+                if( input_kształt != "" )
+                {
+                    wybrany_kształt = input_kształt;
+                }
+
+                let R, G, B;
+
+                if( input_rgb_R != "" && input_rgb_G != "" && input_rgb_B != "" 
+                    && ( input_rgb_R >= 0 && input_rgb_R <= 255 ) && ( input_rgb_G >= 0 && input_rgb_G <= 255 ) && ( input_rgb_B >= 0 && input_rgb_B <= 255 ) )
+                {
+                    R = input_rgb_R;
+                    G = input_rgb_G;
+                    B = input_rgb_B;
+                }
+                else document.getElementById( "buttonKolor" ).style.backgroundColor = "rgb(" + 255 + "," + 255 + "," + 255 + ")"
+
+                let wynikKształt = document.getElementById( "wynikKształt" );
+
+                if( wybrany_kształt == 1 )      wynikKształt.innerHTML = "zamówiłeś żelka: miś";
+                else if( wybrany_kształt == 2 ) wynikKształt.innerHTML = "zamówiłeś żelka: żabka";
+                else if( wybrany_kształt == 3 ) wynikKształt.innerHTML = "zamówiłeś żelka: serce";
+                else                            wynikKształt.innerHTML = "zamówiłeś żelka: inny kształt";
+                
+                document.getElementById( "buttonKolor" ).style.backgroundColor = "rgb(" + R + "," + G + "," + B + ")";
+            }
+
+        </script>
+
+        <button onclick="zamowKolor()">Zamów</button> <br>
+
+        <p id="wynikKształt">Wybrany kształt</p>
+
+        <button id="buttonKolor">Wybrany kolor</button>
+
+    </section>
+
+    <section id="stopka">
+
+        Autor strony: <i>Ksawery Zelek</i>
+
+    </section>
+    
+</body>
+</html>

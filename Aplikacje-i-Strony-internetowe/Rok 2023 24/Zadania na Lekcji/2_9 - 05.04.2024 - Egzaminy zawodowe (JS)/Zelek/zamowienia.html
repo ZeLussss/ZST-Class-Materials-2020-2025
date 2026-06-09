@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styl4.css">
+
+    <title>Zamówienia hurtowe</title>
+
+    <script>
+
+        let prod1 = document.getElementById( "prod1" );
+        let prod2 = document.getElementById( "prod2" );
+        let prod3 = document.getElementById( "prod3" );
+        let prod4 = document.getElementById( "prod4" );
+
+        
+
+
+        console.log( ilosc1 );
+
+    </script>
+
+    <!-- 
+
+‒ Na początku działania skryptu jest wywoływana funkcja zaznaczająca braki oraz zainicjowana jest 
+wartością 0 zmienna przechowująca id zamówienia 
+‒ Funkcja zaznaczająca braki – obraz 3:
+‒ Sprawdza wartości w kolumnie „Dostępna Ilość” dla każdego wiersza tabeli
+‒ Jeżeli wartość jest równa 0, tło tej komórki zmienione jest na czerwone
+‒ Jeżeli wartość jest z przedziału <1, 5>, tło tej komórki zmienione jest na żółte
+‒ W każdym innym przypadku tło komórki jest koloru Honeydew
+‒ Funkcja aktualizująca – obraz 4:
+‒ Wywoływana po przyciśnięciu przycisku w danym wierszu tabeli
+‒ Wyświetla okno z polem do wpisania wartości, podpisane: „Podaj nową ilość:”
+‒ Podaną w oknie wartość wpisuje do odpowiedniego wiersza, kolumny „Dostępna ilość”
+‒ Wywołuje funkcję zaznaczającą braki
+‒ Funkcja zamawiająca – obraz 5:
+‒ Zwiększa o jeden id zamówienia
+‒ Wyświetla komunikat o treści: „Zamówienie nr: <id zamówienia> Produkt: <nazwa produktu>”. 
+Pola zapisane w <> wypełniane są automatycznie wartością id_zamowienia oraz nazwą produktu 
+z kolumny „Produkt” danego wiersza tabeli -->
+
+</head>
+<body>
+
+    <section id="baner">
+
+        <h1>Sieci komputerowe</h1>
+
+    </section>
+
+    <section id="lewy">
+
+        <h2>Aktualizacja i zamówienia materiałów</h2>
+
+        <p>Do wewnętrznego użytku firmy</p>
+
+        <img src="obraz.png" alt="sieć komputerowa">
+
+    </section>
+
+    <section id="prawy">
+
+        <table>
+
+            <tr>
+                <th>Produkt</th>
+                <th>Jednostka</th>
+                <th>Dostępna ilość</th>
+                <th>Aktualizacja</th>
+                <th>Zamówienie</th>
+            </tr>
+
+            <tr>
+                <td>Skrętka U/UTP drut</td>
+                <td>metr</td>
+                <td id="prod1" name="prod1">0</td>
+                <td> <button class="akt" name="akt" onclick="aktualizuj()">Aktualizuj</button> </td>
+                <td> <button class="zam" name="zam" onclick="zamow()">Zamów</button> </td>
+            </tr>
+
+            <tr>
+                <td>Skrętka U/UTP linka</td>
+                <td>metr</td>
+                <td id="prod2" name="prod2">2</td>
+                <td> <button class="akt" name="akt" onclick="aktualizuj()">Aktualizuj</button> </td>
+                <td> <button class="zam" name="zam" onclick="zamow()">Zamów</button> </td>
+            </tr>
+
+            <tr>
+                <td>Wtyki 8P8C</td>
+                <td>sztuki</td>
+                <td id="prod3" name="prod3">10</td>
+                <td> <button class="akt" name="akt" onclick="aktualizuj()">Aktualizuj</button> </td>
+                <td> <button class="zam" name="zam" onclick="zamow()">Zamów</button> </td>
+            </tr>
+
+            <tr>
+                <td>Moduły Keystone</td>
+                <td>sztuki</td>
+                <td id="prod4" name="prod4">30</td>
+                <td> <button class="akt" name="akt" onclick="aktualizuj()">Aktualizuj</button> </td>
+                <td> <button class="zam" name="zam" onclick="zamow()">Zamów</button> </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section id="stopka">
+
+        <a href="http://sieci.pl/" target="_blank">Nasza strona internetowa</a>
+
+        <p>Stronę przygotował: Ksawery Zelek</p>
+
+    </section>
+    
+</body>
+</html>

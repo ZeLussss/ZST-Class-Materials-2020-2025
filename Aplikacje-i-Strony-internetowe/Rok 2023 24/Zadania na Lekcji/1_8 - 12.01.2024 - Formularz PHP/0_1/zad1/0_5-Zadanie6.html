@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="0_5-Zadanie6.css">
+    <script src="0_5-Zadanie6.js"></script>
+
+    <title>Zadanie 6</title>
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="banner">
+
+            <h1>Formularz rejestracyjny</h1>
+
+        </div>
+
+        
+        <form action="0_5-Zadanie6-skrypt.php" method="post">
+
+
+            <div id="formularz">
+                
+                <div id="info_user">
+        
+                    <h2>Dane użytkownika</h2>
+        
+                    <table id="w_radio">
+        
+                        <tr>
+        
+                            <th colspan="2" id="radio">
+        
+                                <div onclick="osoba_prywatna( 1 )" class="radio-block">
+
+                                    <input type="radio" name="forma_pracy" value="Firma" id="forma_pracy-1">
+                                    <label for="forma_pracy-1">Firma</label>
+
+                                </div>
+
+                                <div onclick="osoba_prywatna( 2 )" class="radio-block">
+
+                                    <input type="radio" name="forma_pracy" value="Osoba prywatna" id="forma_pracy-2">
+                                    <label for="forma_pracy-2">Osoba prywatna</label>   
+
+                                </div>
+        
+        
+                            </th>
+        
+                        </tr>
+
+                    </table>
+
+                    <table>
+        
+                        <tr>
+        
+                            <th>
+                                <label for="imie">Imie:</label>
+                            </th>
+        
+                            <td>
+                                <input type="text" name="imie">
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+        
+                            <th>Nazwisko:</th>
+        
+                            <td>
+                                <input type="text" name="nazwisko">
+                            </td>
+        
+                        </tr>
+        
+                        <tr id="firma_xxx">
+        
+                            <th>Nazwa firmy:</th>
+        
+                            <td>
+                                <input type="text" name="firma" id="firma">
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+        
+                            <th>Adres:</th>
+        
+                            <td>
+                                <input type="text" name="adres">
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+        
+                            <th>Kod pocztowy:</th>
+        
+                            <td>
+                                <input type="text" name="kod_pocztowy">
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+        
+                            <th>Miasto:</th>
+        
+                            <td>
+                                <input type="text" name="miasto">
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+        
+                            <th>Kraj:</th>
+        
+                            <td>
+                                <select name="country">
+            
+                                    <option value="">---Wybierz kraj---</option>
+                                    <option value="Polska">Polska</option>
+                                    <option value="Hiszpania">Hiszpania</option>
+                                    <option value="Niemcy">Niemcy</option>
+                                    <option value="Rosja">Rosja</option>
+                                    <option value="Fracja">Fracja</option>
+            
+                                </select>
+                            </td>
+        
+                        </tr>
+        
+                    </table>
+                    
+                </div>
+                
+                <div id="login">
+    
+                    <h2>Dane do logowania</h2>
+    
+                    <table id="table-login">
+    
+                        <tr>
+    
+                            <th>Nazwa użytkownika:</th>
+    
+                            <td>
+                                <input type="text" name="username">
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+    
+                            <th>Hasło:</th>
+    
+                            <td>
+                                <input type="password" name="password">
+                            </td>
+    
+                        </tr>
+    
+                    </table>
+    
+                    <div id="for_regulamin">
+
+                        <input type="checkbox" name="regulamin" id="regulamin">
+                        <label for="regulamin">
+                            <span class="important">*</span> Akceptuję warunki <a href="#">regulaminu.</a>
+                        </label>
+
+                    </div>
+
+    
+                </div>
+        
+                <div id="register">
+
+                    <table id="table-register">
+
+                        <tr>
+
+                            <th>Adres e-mail:</th>
+
+                            <td>
+                                <input type="text" name="email">
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Telefon:</th>
+
+                            <td>
+                                <input type="text" name="telefon">
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th>Telefon dodatkowy:</th>
+
+                            <td>
+                                <input type="text" name="telefon_dodatkowy">
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                    <table id="table-end">
+
+                        <tr>
+
+                            <td>
+                                pola oznacone -<span class="important"><sub> * </sub></span>- są wymagane
+                            </td>
+
+                            <td>
+                                <button type="submit" id="submit">Zarejestruj się</button>
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+    
+                </div>
+    
+    
+            </div>
+
+        </form>
+
+
+</body>
+</html>

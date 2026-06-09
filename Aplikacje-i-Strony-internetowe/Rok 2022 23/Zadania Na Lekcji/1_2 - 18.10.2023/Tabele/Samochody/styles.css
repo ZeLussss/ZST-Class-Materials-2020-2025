@@ -1,0 +1,28 @@
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+table th
+{
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+table td
+{
+    background-color: rgb(226, 226, 226);
+    border: 2px solid gray;
+    padding: 5px;
+    text-align: center;
+}
+
+.title
+{
+    background-color: rgb(163, 162, 162);
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px;
+}

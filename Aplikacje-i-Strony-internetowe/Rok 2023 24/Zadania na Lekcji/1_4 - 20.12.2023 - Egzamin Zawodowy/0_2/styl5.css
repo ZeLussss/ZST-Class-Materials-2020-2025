@@ -1,0 +1,69 @@
+body
+{
+    font-family: Verdana;
+}
+
+#banner
+{
+    background-color: #9692B1;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+
+#lewy
+{
+    background-color: #9692B1;
+    color: white;
+    width: 20%;
+    height: 750px;
+    text-align: center;
+    float: left;
+}
+
+#prawy-top
+{
+    background-color: #FFF4CC;
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    float: left;
+}
+
+#prawy-bottom
+{
+    background-color: #DBCC93;
+    width: 80%;
+    height: 450px;
+    text-align: center;
+    float: left;
+}
+
+#stopka
+{
+    background-color: #9692B1;
+    color: white;
+    text-align: right;
+    clear: both;
+}
+
+a
+{
+    color: white;
+}
+
+#prawy-top > img
+{
+    width: 15%;
+    margin: 20px;
+}
+
+#prawy-bottom > p > img
+{
+    border: 4px solid #9692B1;
+}
+
+#prawy-bottom > p > img:hover
+{
+    border: 4px solid gray;
+}

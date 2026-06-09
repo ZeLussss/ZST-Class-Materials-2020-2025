@@ -1,0 +1,4 @@
+Kw1. INSERT INTO  ratownicy VALUES(NULL,20,'Adam Nowak','Jan Kowalski','Anna Nowakowska')
+Kw2. SELECT id,adres,ratownicy_id FROM zgloszenia WHERE dyspozytorzy=4
+Kw3. CREATE USER 'adam' identified by'Adam6&'
+Kw4. GRANT CREATE,ALTER,DROP ON ratownicy TO 'adam' 

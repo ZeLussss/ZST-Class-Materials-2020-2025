@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        p:not(p.irrelevant) {
+            font-weight: bold;
+        }
+
+        p > strong,
+        p > b.important {
+            color: crimson;
+        }
+
+        p > :not(strong, b.important) {
+            color: darkmagenta;
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p><b>Mars</b> is one of the most Earth-like <br>
+    planets.<b> Mars</b> day is almost the <br>
+    same as an Earth day, only <strong>37 <br> minutes</strong>
+    longer.</p>
+
+    <p class="irrelevant"><b class="important">NASA</b>'s Jet <del>Momentum</del> Propulsion <br>
+    Laboratory is designing mission <br>
+    concepts to survive the <b>Venus</b> <br>
+    extreme temperatures and <br>
+    atmospheric pressure.</p>
+
+</body>
+</html>
