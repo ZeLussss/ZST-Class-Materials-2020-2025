@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "UDP_Client",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "UDP_Client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UDP_Client-Debug-3853f9f1807ac6e77e3c.json",
+					"name" : "UDP_Client",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Pliki/Szko\u0142a/!Zaj\u0119ciaAT/Lekcja0_9-25.11.2024/C++/UDP_Client/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
+		"source" : "E:/Pliki/Szko\u0142a/!Zaj\u0119ciaAT/Lekcja0_9-25.11.2024/C++/UDP_Client"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

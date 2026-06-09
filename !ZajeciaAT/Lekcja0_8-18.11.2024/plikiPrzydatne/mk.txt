@@ -1,0 +1,154 @@
+1.
+moje_krotki = [(1, 2), (3, 4), (5, 6), (7, 8)]
+
+nowa_lista_sum = []  # Pusta lista na sumy
+
+for krotka in moje_krotki:
+    suma = krotka[0] + krotka[1]
+    nowa_lista_sum.append(suma)
+
+print(nowa_lista_sum)
+
+2.
+rok_poczatkowy = int(input("Podaj rok początkowy: "))
+rok_koncowy = int(input("Podaj rok końcowy: "))
+
+lata_przestepne = [rok for rok in range(rok_poczatkowy, rok_koncowy) 
+                   if (rok % 4 == 0 and rok % 100 != 0) or (rok % 400 == 0)]
+
+print("Lata przestępne:", lata_przestepne)
+
+3.
+slownik_liczebniki = {
+    '0': 'zero', 
+    '1': 'jeden', 
+    '2': 'dwa', 
+    '3': 'trzy', 
+    '4': 'cztery', 
+    '5': 'pięć', 
+    '6': 'sześć', 
+    '7': 'siedem', 
+    '8': 'osiem', 
+    '9': 'dziewięć'
+}
+
+napis = input("Podaj ciąg cyfr: ")
+
+napis_slowny = ""
+
+for znak in napis:
+    if znak in slownik_liczebniki:
+        napis_slowny += slownik_liczebniki[znak] + " "
+
+print(napis_slowny.strip())
+
+4.
+slownik_rzymskie = {
+    'I': 1, 
+    'V': 5, 
+    'X': 10, 
+    'L': 50, 
+    'C': 100, 
+    'D': 500, 
+    'M': 1000
+}
+
+liczba_rzymska = input("Podaj liczbę rzymską: ")
+
+suma = 0
+
+for i in range(len(liczba_rzymska)):
+    if i + 1 < len(liczba_rzymska):
+        if slownik_rzymskie[liczba_rzymska[i]] >= slownik_rzymskie[liczba_rzymska[i + 1]]:
+            suma += slownik_rzymskie[liczba_rzymska[i]]
+        else:
+            suma -= slownik_rzymskie[liczba_rzymska[i]]
+    else:
+        suma += slownik_rzymskie[liczba_rzymska[i]]
+
+print("Wartość arabska:", suma)
+
+5.
+kontakty = {
+    ('Jan', 'Kowalski'): "123456789", 
+    ('Adam', 'Nowak'): "987654321", 
+    ('Adam', 'Kowalski'): "600300900"
+}
+
+print("Numer telefonu Adama Nowaka:", kontakty[('Adam', 'Nowak')])
+
+print("Numery telefonu Kowalskich:")
+for klucz in kontakty:
+    if klucz[1] == 'Kowalski':
+        print(kontakty[klucz])
+
+6.
+napis = input("Podaj napis: ")
+
+sprawdzone_litery = ""
+
+for indeks, litera in enumerate(napis):
+    if litera not in sprawdzone_litery:
+        indeksy = ""
+        liczba_wystapien = 0
+        
+        for i, l in enumerate(napis):
+            if l == litera:
+                indeksy += str(i) + " "  # Zapisujemy indeks litery
+                liczba_wystapien += 1  # Zwiększamy liczbę wystąpień
+        
+        print(f"{litera}: {indeksy}({liczba_wystapien})")
+        
+        sprawdzone_litery += litera
+
+7.
+slownik_dziesiatki = {
+    'dwadzieścia': 20,
+    'trzydzieści': 30,
+    'czterdzieści': 40,
+    'pięćdziesiąt': 50
+}
+
+slownik_jednosci = {
+    'zero': 0,
+    'jeden': 1,
+    'dwa': 2,
+    'trzy': 3,
+    'cztery': 4,
+    'pięć': 5,
+    'sześć': 6,
+    'siedem': 7,
+    'osiem': 8,
+    'dziewięć': 9
+}
+
+def zamien_na_liczbe(napis):
+    wyrazy = napis.split()
+
+    dziesiatki = slownik_dziesiatki[wyrazy[0]]
+
+    if len(wyrazy) > 1:
+        jednosci = slownik_jednosci[wyrazy[1]]
+    else:
+        jednosci = 0  # Jeśli nie ma drugiego słowa, jedności to zero
+
+    return dziesiatki + jednosci
+
+napis = input("Podaj liczbę słownie (np. 'dwadzieścia jeden'): ")
+liczba = zamien_na_liczbe(napis)
+print("Liczba:", liczba)
+
+8.
+tablica = [[0 for _ in range(5)] for _ in range(3)]
+
+liczba = 1  
+for i in range(3):  
+    for j in range(5):  
+        tablica[i][j] = liczba * liczba 
+        liczba += 1  
+
+for wiersz in tablica:
+    print(wiersz)
+
+
+

@@ -1,0 +1,161 @@
+1.
+def znajdz_wspolne_elementy(sekwencja1, sekwencja2):
+    lista_wspolne = []
+    
+    for element in sekwencja1:
+        if element in sekwencja2:
+            if element not in lista_wspolne:
+                lista_wspolne.append(element)
+    
+    return lista_wspolne
+
+krotka1 = (3, 3, 4, 5)
+krotka2 = (3, 3, 2, 5)
+
+print(znajdz_wspolne_elementy(krotka1, krotka2))
+
+2.
+def srednia_i_wariancja(tablica):
+    N = len(tablica)  # liczba elementów w tablicy
+    
+    suma = 0
+    for i in range(N):
+        suma = suma + tablica[i]  
+    srednia = suma / N  
+    
+    suma_kwadratow = 0
+    for i in range(N):
+        suma_kwadratow = suma_kwadratow + (tablica[i] - srednia) ** 2 
+    wariancja = suma_kwadratow / (N - 1)  
+    
+    return srednia, wariancja  # Zwracamy obie wartości
+
+
+tablica = []  
+
+while True:
+    liczba = float(input("Podaj liczbę (0 kończy): "))  
+    if liczba == 0:  
+        break
+    tablica.append(liczba)  
+
+srednia, wariancja = srednia_i_wariancja(tablica)
+print("Średnia wynosi:", srednia)
+print("Wariancja wynosi:", wariancja)
+
+srednia, wariancja = srednia_i_wariancja([3, 3, 3, 3])
+print("Średnia wynosi:", srednia)
+print("Wariancja wynosi:", wariancja)
+
+srednia, wariancja = srednia_i_wariancja([5, 6, 7, 8, 9])
+print("Średnia wynosi:", srednia)
+print("Wariancja wynosi:", wariancja)
+
+3.
+import math  
+
+def policz_pola(*figury):
+    slownik_pol = {}  
+
+    for figura in figury:
+        nazwa = figura[0]  
+        
+        if nazwa == 'koło':  
+            promien = figura[1]  
+            pole = math.pi * promien ** 2  
+            
+            if 'koło' not in slownik_pol:  
+                slownik_pol['koło'] = [] 
+            slownik_pol['koło'].append(pole)  
+
+        elif nazwa == 'kwadrat':  
+            bok = figura[1]  
+            pole = bok ** 2
+            
+            if 'kwadrat' not in slownik_pol:
+                slownik_pol['kwadrat'] = []
+            slownik_pol['kwadrat'].append(pole)
+
+        elif nazwa == 'prostokąt':  
+            bok1 = figura[1]
+            bok2 = figura[2]
+            pole = bok1 * bok2  
+            
+            if 'prostokąt' not in slownik_pol:
+                slownik_pol['prostokąt'] = []
+            slownik_pol['prostokąt'].append(pole)
+
+        elif nazwa == 'trójkąt':  
+            podstawa = figura[1]
+            wysokosc = figura[2]
+            pole = 0.5 * podstawa * wysokosc  # Pole trójkąta to (1/2) * podstawa * wysokość
+            
+            if 'trójkąt' not in slownik_pol:
+                slownik_pol['trójkąt'] = []
+            slownik_pol['trójkąt'].append(pole)
+
+    return slownik_pol  
+
+
+wyniki = policz_pola(('koło', 3), ('koło', 4), ('kwadrat', 2), ('kwadrat', 3), ('prostokąt', 1, 2), ('trójkąt', 3, 4))
+
+print(wyniki)
+
+
+4.
+import math 
+
+def derivative(f, x, h=0.0001):
+    return (f(x + h) - f(x)) / h
+
+def kwadrat(x):
+    return x ** 2  
+
+
+pochodna_sin_1 = derivative(math.sin, 1)
+print("Pochodna sin(x) w punkcie 1 wynosi:", pochodna_sin_1)
+
+pochodna_sin_0 = derivative(math.sin, 0)
+print("Pochodna sin(x) w punkcie 0 wynosi:", pochodna_sin_0)
+
+pochodna_kwadrat_1 = derivative(kwadrat, 1, h=0.00001)
+print("Pochodna x^2 w punkcie 1 wynosi:", pochodna_kwadrat_1)
+
+
+5.
+import math  # Potrzebne do funkcji sin
+
+def bisekcja(f, x1, x2, eps):
+    f1 = f(x1)
+    f2 = f(x2)
+
+    if f1 * f2 > 0:
+        print("Brak miejsca zerowego w przedziale.")
+        return None
+
+    while abs(x2 - x1) > eps:
+        # Obliczamy środek przedziału
+        x_srodek = (x1 + x2) / 2
+        f_srodek = f(x_srodek)
+
+        if abs(f_srodek) < eps:
+            return x_srodek
+
+        if f1 * f_srodek < 0:
+            x2 = x_srodek  
+        else:
+            x1 = x_srodek  
+            f1 = f_srodek
+
+    return (x1 + x2) / 2
+
+
+def wielomian(x):
+    return x**3 - 2*x**2 + 4*x - 1
+
+
+zero_sinus = bisekcja(math.sin, -1.5, 1, 0.001)
+print("Miejsce zerowe sin(x) w przedziale (-1.5, 1):", zero_sinus)
+
+zero_wielomian = bisekcja(wielomian, -10, 10, 0.001)
+print("Miejsce zerowe wielomianu w przedziale (-10, 10):", zero_wielomian)

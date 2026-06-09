@@ -1,0 +1,167 @@
+1.
+import sys
+
+def drukuj(*args, sep=" ", end="\n"):
+    teksty = [str(arg) for arg in args]
+    
+    wynik = sep.join(teksty)
+    
+    wynik += end
+    
+    sys.stdout.write(wynik)
+
+if __name__ == "__main__":
+    drukuj(192, 168, 0, 1, sep=":")
+
+    temperatura = 36.6
+    drukuj("Temperatura wynosi", temperatura, "stopni")
+
+    for _ in range(10):
+        drukuj("*", end="")
+
+2.
+def my_range(*args):
+    if len(args) == 1:
+        a, b, k = 0.0, args[0], 1.0  
+    elif len(args) == 2:
+        a, b, k = args[0], args[1], 1.0  
+    elif len(args) == 3:
+        a, b, k = args[0], args[1], args[2]  
+    else:
+        raise ValueError("Funkcja my_range przyjmuje od 1 do 3 argumentów.")
+    
+    if k == 0.0:
+        raise ValueError("Krok nie może wynosić 0.0.")
+    
+    wynik = []
+    if k > 0:
+        while a < b:
+            wynik.append(a)
+            a += k
+    else:
+        while a > b:
+            wynik.append(a)
+            a += k  
+
+    return wynik
+
+def main():
+    try:
+        print("my_range(1.1, 2.2, 0.5) =>", my_range(1.1, 2.2, 0.5))
+        print("my_range(1.1, 2.1, 0.5) =>", my_range(1.1, 2.1, 0.5))
+        print("my_range(1.1, 2.2) =>", my_range(1.1, 2.2))
+        print("my_range(2.2) =>", my_range(2.2))
+        print("my_range(2.2, 0.1, -0.5) =>", my_range(2.2, 0.1, -0.5))
+        print("my_range(1.1, 2.2, 0.5, 1.0) =>", my_range(1.1, 2.2, 0.5, 1.0))
+    except ValueError as e:
+        print("Błąd:", e)
+
+if __name__ == "__main__":
+    main()
+
+3.
+def my_range(*args):
+    if len(args) == 1:
+        a, b, k = 0.0, args[0], 1.0  
+    elif len(args) == 2:
+        a, b, k = args[0], args[1], 1.0  
+    elif len(args) == 3:
+        a, b, k = args[0], args[1], args[2]  
+    else:
+        raise ValueError("Funkcja my_range przyjmuje od 1 do 3 argumentów.")
+    
+    if k == 0.0:
+        raise ValueError("Krok nie może wynosić 0.0.")
+    
+    if k > 0:
+        while a < b:
+            yield a
+            a += k
+    else:
+        while a > b:
+            yield a
+            a += k
+
+def main():
+    try:
+        print("my_range(1.1, 2.2, 0.5) =>", end=" ")
+        for val in my_range(1.1, 2.2, 0.5):
+            print(val, end=", ")
+        print()  
+
+        print("my_range(1.1, 2.1, 0.5) =>", end=" ")
+        for val in my_range(1.1, 2.1, 0.5):
+            print(val, end=", ")
+        print()
+
+        print("my_range(1.1, 2.2) =>", end=" ")
+        for val in my_range(1.1, 2.2):
+            print(val, end=", ")
+        print()
+
+        print("my_range(2.2) =>", end=" ")
+        for val in my_range(2.2):
+            print(val, end=", ")
+        print()
+
+        print("my_range(2.2, 0.1, -0.5) =>", end=" ")
+        for val in my_range(2.2, 0.1, -0.5):
+            print(val, end=", ")
+        print()
+
+        print("my_range(1.1, 2.2, 0.5, 1.0) =>", end=" ")
+        for val in my_range(1.1, 2.2, 0.5, 1.0):
+            print(val, end=", ")
+        print()
+
+    except ValueError as e:
+        print("Błąd:", e)
+
+if __name__ == "__main__":
+    main()
+
+4.
+def zamien_na_wielkie_litery(funkcja):
+    def wrapper(*args, **kwargs):
+        wynik = funkcja(*args, **kwargs)
+        return wynik.upper()  
+    return wrapper
+
+@zamien_na_wielkie_litery
+def cyfry_slownie(napis):
+    slownik_liczebniki = {
+        '0': 'zero', 
+        '1': 'jeden', 
+        '2': 'dwa', 
+        '3': 'trzy', 
+        '4': 'cztery', 
+        '5': 'pięć', 
+        '6': 'sześć', 
+        '7': 'siedem', 
+        '8': 'osiem', 
+        '9': 'dziewięć'
+    }
+
+    napis_slowny = ""
+    for znak in napis:
+        if znak in slownik_liczebniki:
+            napis_slowny += slownik_liczebniki[znak] + " "
+
+    return napis_slowny.strip()  
+
+@zamien_na_wielkie_litery
+def drukuj_napis(*args, sep=" ", end="\n"):
+    teksty = [str(arg) for arg in args]  
+    wynik = sep.join(teksty) + end
+    return wynik  
+
+def main():
+    wynik_cyfry = cyfry_slownie("1410")
+    print("Wynik funkcji cyfry_slownie:", wynik_cyfry)
+
+    wynik_drukuj = drukuj_napis("Ala", "ma", "kota", sep=" ")
+    print("Wynik funkcji drukuj_napis:", wynik_drukuj)
+
+if __name__ == "__main__":
+    main()
+

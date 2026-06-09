@@ -1,0 +1,2 @@
+MAC_ADDR (Adrian): 	3c:84:27:e6:5f:3c
+MAC_ADDR (Ksawery): 	3c:84:27:e6:5c:04

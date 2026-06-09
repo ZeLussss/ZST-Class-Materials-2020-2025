@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<uczelnia>
+    
+    <nazwa>Akademia Nauk Stosowanych</nazwa>
+    <nazwaKrotka>ANS</nazwaKrotka>
+    <wydzialy>
+        
+        <politechniczny>
+            
+            <informatyka katedra="Informatyki">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </informatyka>
+            
+            <automatykaIRobotyka katedra="Automatyki i Robotyki">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </automatykaIRobotyka>
+            
+            <elektronika katedra="Elektroniki, Telekomunikacji i Mechatroniki">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </elektronika>
+            
+            <mechatronika katedra="Elektroniki, Telekomunikacji i Mechatroniki">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </mechatronika>
+            
+            <elektronikaITelekomunikacja katedra="Elektorniki, Telekomunikacji i Mechatroniki">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </elektronikaITelekomunikacja>
+            
+            <elektrotechnika katedra="Elektrotechniki">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </elektrotechnika>
+            
+            <technikaIZarzadzanieProdukcja katedra="Inżynierii Materiałowej">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </technikaIZarzadzanieProdukcja>
+            
+            <technologiaChemiczna katedra="Inżynierii Materiałowej">
+                
+                <liczbaStudentow>&lt;500</liczbaStudentow>
+                <liczbaPracownikow>5</liczbaPracownikow>
+                <daneKontaktowe>
+                
+                    <kierownik>Jan Kowalski</kierownik>
+                    <zastKierownika>Adam Igła</zastKierownika>
+                    <telefon>123123123</telefon>
+                    <email>abcde@gmail.com</email>
+                
+                </daneKontaktowe>
+                
+            </technologiaChemiczna>
+            
+            
+        </politechniczny>
+        
+        <humanistyczny>
+            
+            <filolofiaPolska></filolofiaPolska>
+            
+            <filologiaAngielska></filologiaAngielska>
+            
+            <filologiaGermanska></filologiaGermanska>
+            
+            <filologiaRomanska></filologiaRomanska>
+            
+            <pedagogika></pedagogika>
+            
+            <jezykFrancuskiDlaPotrzebZawodowych></jezykFrancuskiDlaPotrzebZawodowych>
+            
+            <psychologia></psychologia>
+            
+            <jezykiObceWKomunikacjiE-Biznesowej></jezykiObceWKomunikacjiE-Biznesowej>
+            
+        </humanistyczny>
+        
+    </wydzialy>
+    
+    <wladzeUczelni>
+        
+        <rektor>
+            
+            <imie>Adam</imie>
+            <nazwisko>Mickiewicz</nazwisko>
+            <tytul>doktor itd</tytul>
+            
+        </rektor>
+        
+        <profesorDoSprawStudenckichIDydaktyki>
+            
+            <imie>Adam</imie>
+            <nazwisko>Mickiewicz</nazwisko>
+            <tytul>doktor itd</tytul>
+            
+        </profesorDoSprawStudenckichIDydaktyki>
+        
+        <profesorDoSprawNaukiIRozwoju>
+            
+            <imie>Adam</imie>
+            <nazwisko>Mickiewicz</nazwisko>
+            <tytul>doktor itd</tytul>
+            
+        </profesorDoSprawNaukiIRozwoju>
+        
+        <kanclerz>
+            
+            <imie>Adam</imie>
+            <nazwisko>Mickiewicz</nazwisko>
+            <tytul>doktor itd</tytul>
+            
+        </kanclerz>
+        
+        
+    </wladzeUczelni>
+    
+    <adres>
+        
+        <Ulica>Adama Mickiewicz</Ulica>
+        <numerBudynku>8</numerBudynku>
+        <kodPocztowy>33-100</kodPocztowy>
+        <miasto>Tarnow</miasto>
+        <nip>000000000</nip>
+        
+    </adres>
+    
+</uczelnia>

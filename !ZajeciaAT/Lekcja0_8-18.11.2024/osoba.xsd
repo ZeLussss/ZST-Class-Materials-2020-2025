@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="wiekType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="150"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="osoba">
+
+        <xs:complexType>
+        
+            <xs:sequence>
+            
+                <xs:element name="imie" type="xs:string"/>
+            
+                <xs:element name="nazwisko" type="xs:string"/>
+            
+                <xs:element name="wiek" type="wiekType"/>
+            
+            </xs:sequence>
+        
+        </xs:complexType>
+    
+    </xs:element>
+    
+</xs:schema>

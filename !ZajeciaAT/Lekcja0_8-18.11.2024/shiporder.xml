@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<order>
+
+    <shipto>
+        <name>Ksawery</name>
+        <address>Ul.Kwiatkowskiego 2137</address>
+        <city>Tarnow</city>
+        <country>Poland</country>
+        <postalCode>33-100</postalCode>
+    </shipto>
+
+    <item>
+        <title>Monster</title>
+        <note>Napój energetyczny</note>
+        <quantity>10</quantity>
+        <price>10</price>
+    </item>
+
+    <shiporder orderid="0">
+        <orderperson>Adam Abecadlo</orderperson>
+        <shipto>
+            <name>Ksawery</name>
+            <address>Ul.Kwiatkowskiego 2137</address>
+            <city>Tarnow</city>
+            <country>Poland</country>
+            <postalCode>33-100</postalCode>
+        </shipto>
+        <item>
+            <title>Monster</title>
+            <note>Napój energetyczny</note>
+            <quantity>10</quantity>
+            <price>10</price>
+        </item>
+    </shiporder>
+
+</order>

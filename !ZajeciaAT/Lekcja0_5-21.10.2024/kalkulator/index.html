@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+
+    <script src="script.js"></script>
+
+    <style>
+
+        button
+        {
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        td
+        {
+            margin: 2;
+        }
+
+    </style>
+
+    <title>Języki znacznikowe</title>
+</head>
+<body>
+
+    <h1>Kalkulator</h1>
+   
+    <form>
+
+        <table>
+
+            <tr>
+
+                <td colspan="4">
+                    <input id="poleDoWyniku" disabled> <br><br>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <button type="button" value="7" id="num7" onclick="add( 7 )">7</button>
+                </td>
+
+                <td>
+                    <button type="button" value="8" id="num8" onclick="add( 8 )">8</button>
+                </td>
+
+                <td>
+                    <button type="button" value="9" id="num9" onclick="add( 9 )">9</button>
+                </td>
+
+                <td>
+                    <button type="button" value="CE" id="CE" onclick="wyczysc()">CE</button>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <button type="button" value="4" id="num4" onclick="add( 4 )">4</button>
+                </td>
+
+                <td>
+                    <button type="button" value="5" id="num5" onclick="add( 5 )">5</button>
+                </td>
+
+                <td>
+                    <button type="button" value="6" id="num6" onclick="add( 6 )">6</button>
+                </td>
+
+                <td>
+                    <button type="button" value="-" id="minus" onclick="change( '-' )">-</button>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <button type="button" value="1" id="num1" onclick="add( 1 )">1</button>
+                </td>
+
+                <td>
+                    <button type="button" value="2" id="num2" onclick="add( 2 )">2</button>
+                </td>
+
+                <td>
+                    <button type="button" value="3" id="num3" onclick="add( 3 )">3</button>
+                </td>
+
+                <td>
+                    <button type="button" value="+" id="plus" onclick="change( '+' )">+</button>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <button type="button" value="x" id="razy" onclick="change( '*' )">x</button>
+                </td>
+
+                <td>
+                    <button type="button" value="0" id="num0" onclick="add( 0 )">0</button>
+                </td>
+
+                <td>
+                    <button type="button" value="/" id="dziel" onclick="change( '/' )">/</button>
+                </td>
+
+                <td>
+                    <button type="button" value="=" id="rownaSie" onclick="wynik()">=</button>
+                    
+                </td>
+
+            </tr>
+
+            <span id="dzialanie"></span>
+
+
+        </table>
+
+
+
+    </form>
+
+</body>
+</html>
