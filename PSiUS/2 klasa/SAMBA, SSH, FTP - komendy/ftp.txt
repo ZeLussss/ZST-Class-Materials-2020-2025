@@ -1,0 +1,50 @@
+FTP:
+~ sudo apt install vsftpd -y
+~ systemctl status vsftpd
+~ sudo cp /etc/vsftpd.conf /etc/vsftpd.conf-kopia
+~ nano /etc/vsftpd.conf
+--> odhashować ~ listen_ipv6=YES
+	           ~ local_enable=YES
+~ sudo adduser [nazwa]
+~ utworzenie plików w folderze /home/[nazwa]
+~ [ST] ftp [ip]
+~ hasło
+~ ls -l sprawdzenie plików w tym katalogu. [dostep ogolny za pomocą hasła]
+~ danie pliku na pulpit -> lcd /home/administrator/Pulpit -> get [nazwa pliku]
+DANIE PLIKU Z ST NA S
+--> odhashować ~ write_enable=YES
+~ systemctl restart vsftpd
+~ systemctl status vsftpd
+ZABLOKOWANIE DOSTEPU DO WSZYSTKIEGO
+--> po punkcie chroot_list_enable below. dać dwie komendy
+~ chroot_local_user=YES
+~ allow_writeable_chroot=YES
+~ restart ftp
+ANONIM
+--> odhaschować ~ anonymous_enable=YES
+~ katalog anonymous -> /srv/ftp
+PRZENOSZENIE KATALOGU ANONIM FTP
+~ sudo mkdir /home/ftp
+~ cd /home
+~ ls -l
+--> po #new directories 
+~ anon_root=/home/ftp
+POZWOLENIE ZAPISYWANIE NA PUBLICZNYM SERWERZE
+--> przed anon_root=/home/ftp
+# ... FTP user.[po] ->
+anon_upload_enable=YES
+--> po
+~ anon_mkdir_write_enable=YES
+~ restart ftp
+TWORZENIE KATALOGU DLA WSZYSKICH
+~ cd /home/ftp
+~ sudo mkdir [nazwa]
+~ ls -l
+~ sudo chmod 777 [nazwa]/
+~ls -l
+PRZYDATNE KOMENDY
+~ sudo addgroup [...]
+~ cat /etc/group
+~ useradd -G [...] -d /home/[nazwakat] -s /usr/sbin/nologin [...]
+~ getend group [...]
+~ sudo passwd [...]

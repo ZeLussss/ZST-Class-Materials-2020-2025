@@ -1,0 +1,81 @@
+Komendy dsadd, dsrm, dsmod, dsmove, dsquery:
+
+Użytkownicy:
+
+- dsadd user "CN=Tomasz Kos,CN=Users,DC=ZST,DC=com" -ln Kos -fn Tomasz -upn
+kost -pwd 1qazXSW@ -disabled no
+
+- dsrm "CN=Tomasz Kos,CN=Users,DC=ZST,DC=com"
+
+- dsmove "CN=James JB. Bond1,CN=Users,DC=ZST,DC=com" -newparent "OU=Pracownia,DC=ZST,DC=com"
+
+Jed.Organizacyjne:
+
+- dsadd ou "OU=Informatycy,DC=ZST,DC=com"
+
+- dsrm "OU=Informatycy,DC=ZST,DC=com"
+
+- dsmove "OU=Pracownia,DC=ZST,DC=com" -newparent "OU=Informatycy,DC=ZST,DC=com"
+
+Grupy:
+
+- dsadd group "CN=Elektronicy,CN=Users,DC=ZST,DC=com" -secgrp yes -scope (l - lokalna,g - globlana,u - uniwersalna) 
+
+- dsrm "CN=Elektronicy,CN=Users,DC=ZST,DC=com"
+
+- dsmod group "CN=klasa2,CN=Users,DC=ZST,DC=com" -addmbr "CN=James JB. Bond8,CN=Users,DC=ZST,DC=com" - dodawanie członka
+
+- dsmod group "CN=klasa2,CN=Users,DC=ZST,DC=com" -rmmbr "CN=James JB. Bond9,CN=Users,DC=ZST,DC=com" - usuwanie członka
+
+- dsquery user "OU=Informatycy,DC=zst,DC=com" | dsmod group "CN=Klasa2,CN=Users,DC=zst,DC=com" -addmbr - dodanie użytkownika na pomocą dsquery od grupy
+
+Inne:
+
+- dsquery user "CN=Users,DC=ZST,DC=com" 	- wyszukanie użytkowników jednoski Users
+
+- dsquery user -name * 					- wyszukanie wszystkich użytkowników w domenie
+
+- dsget user nazwa_DN (-memberof, -expand, -upn)
+
+- dsget group nazwa_DN (-members, -secgrp, -desc)
+
+Komenda ldifde:
+
+- ldifde -f info.txt - informacje o domenie
+
+- ldifde -f info1.txt -s serwer00 -d "CN=James JB. Bond8,CN=Users,DC=zst,DC=com" - informacje o konkretnym użytkowniku
+
+ W pliku:
+DN: CN=James JB. Bond2,OU=Informatycy,DC=zst,DC=com 	– nazwa DN
+changetype: add 								– dodawanie obiektu(usuwanie to "delete")
+CN: James JB. Bond2 							– pełna nazwa użytkownika
+description: PSiUS 								– opis
+objectClass: user 								– typ obiektu
+userAccountControl: 544 						– włączenie konta
+userPrincipalName: bondj2 						– nazwa główna użytkownika
+sAMAccountName: bondj2 							– nazwa konta
+givenName: James 								– imię
+sn: Bond2 									– nazwisko
+
+Komenda na wykonanie: ldifde -i -f user.txt -s serwer00.zst.com
+
+PowerShell new-ADUser:
+
+new-ADUser -Name "James Bond21" -SamAccountName "bondj21" -UserPrincipalName
+"bondj21" -GivenName "James" -SurName "Bond21" -path "CN=Users,DC=zst,DC=com" 
+-Enabled $true -AccountPassword(Read-Host -AsSecureString "Password") 
+-ChangePasswordAtLogon $true
+
+PowerShell Import-CSV (Użytkownicy z pliku .csv):
+
+Przykład pliku .csv:
+
+samAccountName,Name,sn,givenname,password,UserPrincipalName,Company,Department
+hubertzel1,Hubert Zelek1,Zelek1,Hubert,ZAQ!2wsx,hubertzel1,ZST,Informatycy
+
+Komenda: 
+
+Import-CSV nazwa.csv | foreach {new-ADUser -SamAccountName $_.samAccountName -Name $_.name -Surname $_.sn 
+-GivenName $_.givenname -path "OU=Informatycy,DC=hzelek,DC=zst,DC=com" -AccountPassword(ConvertTo-SecureString 
+-AsPlainText $_.password -Force) -UserPrincipalName $_.UserPrincipalName -Company $_.Company 
+-Department $_.Department -Enabled $true}

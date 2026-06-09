@@ -1,0 +1,64 @@
+SAMBA:
+~ sudo apt install samba
+~ systemctl status smbd
+~ sudo mkdir /home/[nazwa]
+~ sudo chmod 777 /home/[nazwa[
+~ ls -l /home
+~ sudo chown nobody:nogroup /home/[nazwa]
+~ cp /etc/samba/smb.conf /etc/samba/smb.conf-kopia
+~ cd /etc/samba
+~ ls -l
+--> nano /etc/samba/smb.conf
+~ workgroup = [...]
+~ server string = %h server (Samba, Ubuntu)
+~ quest account = nobody
+~wins support = no
+--> koniec pliku ->
+[nazwa_folderu[
+3 liczba- ~ path = /home/[nazwa]
+	 comment = [nazwa]-quest
+	 writable = yes
+	 browseable = yes
+	 quest ok = yes
+~ sudo systemctl restart smbd
+~ sudo systemctl status smbd
+POŁĄCZENIE DLA 1 UŻYTKOWNIKA
+~ sudo adduser [nazwa]
+~ sudo smbpasswd -a [nazwa]
+TWORZYMY AUTORYZOWANY FOLDER
+~ sudo mkdir /home/[nazwa]
+~ sudo chmod 777 /home/[nazwa]
+~ ls -l  /home
+--> nano /etc/samba/smb.conf
+-> na końcu ->
+[nazwa folderu]
+3 liczba- ~ path = /home/[nazwa]
+	 comment = [nazwa]-[użytk]
+	 writable = yes
+	 browseable = yes
+	 quest ok = no
+	 valid users = [użytk[
+~ restart samba
+POŁĄCZENIE DLA WIELU UŻYTK
+~ sudo adduser [kilka]
+~ sudo smbpasswd -a [użytk]
+~ sudo addgroup [nazwa]
+~ sudo usermod -G [nazwa] -a [użytk]
+~ nano /etc/group
+--> nano /etc/samba/smb.conf
+-> na końcu
+[nazwa_folderu]
+3 liczba- ~ path = /home/[nazwa]
+	 comment = grupa=[nazwa]-[nazwa]
+	 writable = yes 
+	 browseable = yes
+	 quest ok = no
+	 valid users = @[nazwa]
+	 create mode = 0755
+	 directory mode = 0770
+~ sudo mkdir -m 777 /home[nazwa]
+~ ls -l /home
+~ restart smbd
+~ status smbd
+
+

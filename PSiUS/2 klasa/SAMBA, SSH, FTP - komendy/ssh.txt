@@ -1,0 +1,8 @@
+SSH:
+~ sudo apt install openssh-server
+~ systemctl status ssh
+~ [ST] ssh administrator@[ip] 
+
+
+
+
