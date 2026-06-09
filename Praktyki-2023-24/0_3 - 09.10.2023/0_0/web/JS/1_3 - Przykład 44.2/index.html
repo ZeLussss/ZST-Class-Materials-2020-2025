@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function koloruj( x )
+        {
+            if( x == 1 )
+                document.fgColor = "blue";
+            if( x == 2 )
+                document.fgColor = "red";
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <h1 onmouseover="koloruj( 1 )" onmouseout="koloruj( 2 )">Przykładowy tekst</h1>
+    
+</body>
+</html>

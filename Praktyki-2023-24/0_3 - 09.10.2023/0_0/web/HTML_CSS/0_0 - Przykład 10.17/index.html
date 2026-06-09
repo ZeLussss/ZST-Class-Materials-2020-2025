@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body
+        {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #blokA, #blokB, #blokC, #blokD
+        {
+            width: 50%;
+            height: 50%;
+            float: left;
+        }
+
+        #blokA
+        {
+            background-color: #CCFF66;
+        }
+
+        #blokB
+        {
+            background-image: linear-gradient( #FFFFCC, #CCFF66, gray, black );
+        }
+
+        #blokC
+        {
+            background-image: radial-gradient( #CCFF33, #003399 );
+        }
+
+        #blokD
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="blokA"></div>
+    <div id="blokB"></div>
+    <div id="blokC"></div>
+    <div id="blokD">Jakieś zdjęcie </div>
+    
+</body>
+</html>

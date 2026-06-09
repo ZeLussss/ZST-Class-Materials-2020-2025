@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="formularz">
+
+        <form method="post">
+
+            <table>
+
+                <tr>
+
+                    <td>Podaj liczbę dorosłych:</td>
+
+                    <td>
+
+                        <input type="text" id="d1">
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Podaj liczbę dzieci:</td>
+
+                    <td>
+
+                        <input type="text" id="d2">
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Podaj liczbę dni:</td>
+
+                    <td>
+
+                        <input type="text" id="d3">
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td colspan="2" style="float: right;">
+                    
+                        <input type="button" id="przycisk" value="Oblicz" onclick="przelicz()">
+                    
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+    
+    <div id="wynik"></div>
+
+</body>
+</html>

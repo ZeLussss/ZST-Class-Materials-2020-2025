@@ -1,0 +1,90 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #CCFFCC;
+}
+
+#container
+{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+#baner
+{
+    background-color: #66CC99;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    height: 8%;
+    margin-top: 2%;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#under_baner
+{
+    height: 20%;
+    font-size: 20px;
+    text-align: center;
+    border-left: 1px solid #66CC00;
+    border-right: 1px solid #66CC00;
+    border-bottom: 1px solid #66CC00;
+}
+
+#panel_lewy, #panel_prawy
+{
+    background-color: #818181;
+    width: 48%;
+    height: 55%;
+    text-align: center;
+    color: white;
+    margin-top: 3%;
+    float: left;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 10px;
+    color: black;
+
+}
+
+#panel_prawy
+{
+    line-height: 1.8em;
+    float: right;
+    text-align: left;
+}
+
+p
+{
+    text-align: justify;
+    padding-left: 1%;
+    padding-right: 1%;
+    line-height: 1.8em;
+}
+
+h3
+{
+    color: #66CC99;
+    text-indent: 4%;
+}
+
+img
+{
+    width: 200px;
+    height: 150px;
+    border-radius: 15px;
+    filter: sepia( 60% );
+    background-repeat: round;
+}
+
+table
+{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}

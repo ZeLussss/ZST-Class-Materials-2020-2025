@@ -1,0 +1,19 @@
+#formularz
+{
+    margin: auto;
+    width: 330px;
+    height: 140px;
+    background-color: #66CCFF;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#wynik
+{
+    margin: auto;
+    width: 350px;
+    height: 100px;
+    background-color: #CC66FF;
+    padding-top: 20px;
+    text-align: center;
+}

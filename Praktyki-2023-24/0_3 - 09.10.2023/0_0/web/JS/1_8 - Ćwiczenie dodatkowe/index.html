@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+
+        <h2>Obliczanie raty kwoty kredytu</h2>
+    
+        <form name="form" method="dialog">
+
+            <div class="blok">
+
+                <label for="kwota_kredytu">Kwota kredytu</label> &nbsp
+                <input type="range" name="kwota_kredytu" min="0" max="1000000" id="input_1" oninput="jeden()" value="500000"> <span> Wybrana kwota: &nbsp;<output id="output_1">500000</output> złoty</span> <br>
+
+            </div>
+
+            <div class="blok">
+
+                <label for="oprocentowanie">Oprocentowanie</label> &nbsp
+                <input type="range" name="oprocentowanie" min="0" max="10" step="0.1" id="input_2" oninput="dwa()" value="5.0"> <span> Wartość: &nbsp;<output id="output_2">5.0</output> %</span> <br>
+
+            </div>
+
+            <div class="blok">
+
+                <label for="okres_kredytowania">Okres kredytowania</label> &nbsp
+                <input type="range" name="okres_kredytowania" min="0" max="150" id="input_3" oninput="trzy()" value="75"> <span> Okres: &nbsp;<output id="output_3">75</output> miesięcy</span> <br><br>
+
+            </div>
+
+            <div class="blok">
+
+                <input type="submit" name="submit" value="Oblicz" onclick="oblicz( this.form )"> 
+                <input type="reset" value="reset" onclick="reload( this.form )">
+
+            </div>
+            
+            <div id="monthly_payment" class="blok">Wynik: </div>
+            
+        </form>
+
+        <div id="footer">Stronę wykonał Ksawery Zelek 4Ti</div>
+
+    </div>
+
+</body>
+</html>

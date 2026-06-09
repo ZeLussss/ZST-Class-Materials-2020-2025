@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+
+        <tr>
+
+            <td>
+                
+                <input type="text" id="liczba1">
+            
+            </td>
+
+            <td>
+
+                <select id="wyb">
+
+                    <option value="d1">+</option>
+                    <option value="d2">-</option>
+                    <option value="d3">*</option>
+                    <option value="d4">/</option>
+
+                </select>
+
+            </td>
+
+            <td>
+
+                <input type="text" id="liczba2">
+
+            </td>
+
+            <td>=</td>
+
+            <td id="wynik"></td>
+
+        </tr>
+
+        <tr>
+
+            <td colspan="5">
+
+                <input type="button" value="Oblicz" onclick="oblicz()">
+
+            </td>
+
+        </tr>
+
+    </table>
+    
+</body>
+</html>

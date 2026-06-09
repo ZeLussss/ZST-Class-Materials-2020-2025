@@ -1,0 +1,25 @@
+
+----- ZADANIA -----
+1. Wyświetl id i nazwisko pracowników, których płaca zaczyna się od cyfry 5, uporządkuj wynik rosnąco po id pracowników;
+2. Wyświetl nazwiska pracowników, którzy zarabiają powyżej 7000, nazwiska wyświetl alfabetycznie;
+3. Wyświetl ile sumarycznie zarabiają pracownicy w dziale sprzedaż;
+4. Podaj nazwiska i id tac pracowników, ze parzystymi IDPrac;
+5. Wyświetl średnią płac wszystkich pracowników jako średnia;
+6. Wyświetl nazwiska pracowników, którzy nie należą do żadnego zespołu i działu;
+
+
+
+
+ZADANIE 3
+
+UPDATE pracownicy SET Zespol = "Magazyn" WHERE Zespol IS NULL;
+UPDATE pracownicy SET Dzial = "Kontrola" WHERE Dzial IS NULL;
+
+INSERT INTO Zespoly (Zespol) SELECT DISTINCT Zespol FROM pracownicy WHERE Zespol IS NOT NULL;
+INSERT INTO Dzialy (Dzial) SELECT DISTINCT Dzial FROM pracownicy WHERE Dzial IS NOT NULL;
+
+DELETE FROM pracownicy WHERE IDPrac = 1;
+
+ALTER TABLE pracownicy ADD FOREIGN KEY(ID_dzialu) REFERENCES Dzialy(ID_Dzialu);
+ALTER TABLE pracownicy ADD FOREIGN KEY(ID_zespolu) REFERENCES Zespoly(ID_Zespolu);
+

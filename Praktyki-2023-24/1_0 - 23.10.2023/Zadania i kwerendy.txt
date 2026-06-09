@@ -1,0 +1,15 @@
+CREATE DATABASE szkola charset utf8 collate="utf8_polish_ci";
+
+
+----- Zadania -----
+1. Wypisz liczbe pozycji gid w tabeli tabela;
+2. Wypisz liczbe wystąpień pozycji uid, kiedy UID > 1000;
+3. Wypisz ID user dla user = root;
+4. Wyświetl pole user dla największej wartości w kolumnie UID;
+5. Wyświetl ID dla istniejących pól null;
+
+6. Wyświetl 10 rekordów z tabeli, począwszy od 11 rekordu. Użyj klauzury LIMIT();
+7. Wyświetl wszystkie występujące gid i liczbę ich wystąpień. Użyj aliasu dla wyświetlanej liczby wystąpień. Alias nazywa się wystąpienia. COUNT(), GROUPBY(), ;
+8. wyświetl user dla wsyztskich user zaczynającej się od litery n a skończywszy na literze s [n,m,o,p,q,r,s], uporządkowane za alfabetem;
+9. Oblicz rekordy wyświetlone w poprzednim zapytaniu.
+10. Wyświetl 10 rekordów z informacją o id i user. Użyj aliasu użytkownik, contat(), żeby ID i user wyświetlić w jednej kolumnie, złączone, spacja;

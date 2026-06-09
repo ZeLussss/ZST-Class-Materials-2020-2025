@@ -1,0 +1,5 @@
+----- ZADANIE -----
+1. Wyświetl nazwisko, płacę, zespół pracownika pracującego w magazynie, którego płaca mieści się w przeziale 
+od 5000 do 9000. Wyświetl malejąco po płacy;
+2. Wyświetl id, nazwisko pracownika którego nazwisko kończy się na 'i' a płaca jest większa niż średnia płaca 
+wszytskich pracowników.

@@ -1,0 +1,44 @@
+table
+{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th
+{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+div
+{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+tr > td > table > td
+{
+    border: 1px solid black;
+}
+
+td.bord
+{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+td.bord2
+{
+    margin-top: 4px;
+    padding-bottom: -2px;
+    width: 200px;
+    height: 240px;
+    border: 1px solid black;
+}
+
+td
+{
+    text-align: center;
+    border: 1px solid black;
+}

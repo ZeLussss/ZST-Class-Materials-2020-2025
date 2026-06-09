@@ -1,0 +1,68 @@
+body
+{
+    background-color: #FFCC66;
+}
+
+#container
+{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blok
+{
+    width: 25%;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 2%;
+    float: left;
+}
+
+.image
+{
+    margin-top: 5%;
+    text-align: center;
+    border: 2px double #CC6633;
+    width: 280px;
+    height: 130px;
+}
+
+.describe
+{
+    height: 30%;
+    background-color: #FFFFCC;
+    margin-top: 1%;
+    padding-top: 2%;
+    width: 284px;
+    overflow: scroll;
+}
+
+.describe::-webkit-scrollbar
+{
+    display: none;
+}
+
+p
+{
+    text-align: justify;
+    color: #330000;
+    font-size: 14px;
+    text-indent: 1.5em;
+    margin: 4%;
+}
+
+h2
+{
+    color: #CC3333;
+    font-family: Verdana;
+}
+
+img
+{
+    width: 280px;
+    height: 130px;
+}

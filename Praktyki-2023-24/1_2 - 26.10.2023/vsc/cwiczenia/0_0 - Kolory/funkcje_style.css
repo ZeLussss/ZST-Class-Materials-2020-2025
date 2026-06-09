@@ -1,0 +1,182 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body
+{
+    background-color: #888;
+}
+
+#container
+{
+    width: 100%;
+    height: 100vh;
+}
+
+.box
+{
+    float: left;
+}
+
+/* BOX 1 */
+.box1
+{
+    height: 14vh;
+    width: 7.5%;
+    background-color: yellow;
+    text-align: right;
+    font-size: 2em;
+}
+
+.box1_1
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #24914A;
+}
+
+.box1_2
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #168CEE;
+}
+
+.box1_3
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #526E62;
+}
+
+/* BOX 2 */
+.box2
+{
+    height: 25vh;
+    width: 13%;
+    background-color:#8f4c38;
+    text-align: left;
+    font-size: 3em;
+}
+
+.box2_1
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;
+    background-color: #D7A495;
+}
+
+.box2_2
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;    
+    background-color: #C7AC5E;
+}
+
+.box2_3
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 45px;    
+    background-color: #5C2F36;
+}
+
+/* BOX 3 */
+.box3
+{
+    height: 38vh;
+    width: 20%;
+    background-color: blueviolet;
+    text-align: center;
+    font-size: 5em;
+}
+
+.box3_1
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 75px;
+    background-color: #AE95DF;
+}
+
+.box3_2
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 75px;
+    background-color: #AE95DF;
+}
+
+.box3_3
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 75px;
+    background-color: #13BD92;
+}
+
+/* KONIEC BOX-ów */
+
+#pasek1
+{
+    display: flex;
+    justify-content: center;
+}
+
+#pasek2
+{
+    display: flex;
+    justify-content: center;
+}
+
+#pasek3
+{
+    display: flex;
+    justify-content: center;
+}
+
+/* FOOTER */
+
+#footer
+{
+    height: 23%;
+    width: 100%;
+    background-color: #DDFD4B;
+}
+
+#left_f
+{
+    float: left;
+    width: 13%;
+    height: 100%;
+    overflow: hidden;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#right_f
+{
+    float: left;
+    width: 87%;
+    height: 100%;
+    border-left: 3px solid black;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-size: 45px;
+}

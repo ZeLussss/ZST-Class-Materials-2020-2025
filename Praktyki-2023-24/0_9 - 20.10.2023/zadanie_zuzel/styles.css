@@ -1,0 +1,170 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: lightgray;
+}
+
+#container
+{
+    width: 100%;
+    height: 135vh;
+    background-color: lightgray;
+}
+
+#menu
+{
+    width: 100%;
+    height: 7.5%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-family: Verdana;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#menu > table
+{
+    display: flex;
+    clear: both;
+}
+
+#menu > table > tbody > tr > td
+{
+    padding-right: 0px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+#baner
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+#baner > img
+{
+    width: 817px;
+    height: 240px;
+    position: relative;
+    top: -15px
+}
+
+#lewy
+{
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 60%;
+    height: 20%;
+    float: left;
+}
+
+#prawy
+{
+    float: left;
+    margin-top: 5%;
+    padding-right: 5%;
+    height: 20%;
+    width: 40%;
+}
+
+.title_p
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(61, 61, 61);
+}
+
+.title_p:hover
+{
+    font-size: 24px;
+    color: rgb(160, 160, 0);
+    transition: 1s;
+}
+
+.blok
+{
+    position: relative;
+    background-color: black;
+    height: 20px;
+    width: 10px;
+    color: black;
+    right: 5px;
+}
+
+.text
+{
+    padding-left: 10px;
+    padding-top: 5px;
+    text-align: justify;
+}
+
+#slawni
+{
+    width: 100%;
+    height: 45%;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    clear: both;
+}
+
+.galery
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.foto
+{
+    width: 21%;
+    text-align: center;
+}
+
+.foto > p.tytul
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#slawni > .galery > .foto > img
+{
+    height: 450px;
+    width: 390px;
+    float: left;
+}
+
+td > a
+{
+    color: white;
+    text-decoration: none;
+}
+
+td > a:hover
+{
+    color: antiquewhite;
+}
+
+a
+{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: gray;
+}
