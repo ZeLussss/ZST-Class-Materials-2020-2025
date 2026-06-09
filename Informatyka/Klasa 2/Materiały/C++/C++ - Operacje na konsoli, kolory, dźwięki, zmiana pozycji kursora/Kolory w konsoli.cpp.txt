@@ -1,0 +1,77 @@
+﻿#include <iostream>
+#include <windows.h> // Potrzebne do kolorów i dźwięków
+
+
+using namespace std;
+
+
+int main()
+{
+        // Pobieramy tzw. uchwyt do okna, do naszej konsoli
+        // To specjalna zmienna przechowująca "numer rejestracyjny" okna/programu z którymi będziemy się chcieli skomunikować naszym programem.
+        HANDLE h = GetStdHandle( STD_OUTPUT_HANDLE );
+        
+        /*
+        Ustawiamy kolory (tła, tekstu) na wydruku bezpośrednio w programie
+        SetConsoleTextAttribute( h, <wartość> );
+        wartość - liczba 8-bit z przedziału od 0 do 255
+        4 bity kolor tła, 4 bity kolor tekstu, co daje po 16 kombinacji kolorów
+        Bity w kolejności: jasność, czerwony, zielony, niebieski
+        Przykładowo: jasnoczerwony to 12 = bit jasności(8) + bit czerwonego(4)
+        
+        Dla lepszego zapisu lepiej używać zapisu szesnastkowego,
+        bo łatwo można oddzielić kolor tła od koloru tekstu,
+        gdzie np.: 0x00 to 0 (czarne tło, czarne litery), a 0xFF to 255 (białe tło, białe litery),
+        0x9C (ciemnoniebieskie tło, jasnoczerwone litery)
+        Można małe litery a-f albo duże A-F, jak komu wygodnie.
+        */
+        
+        // Wydruk spacji oczywiście maluje tło na dany kolor
+        SetConsoleTextAttribute( h, 0x20 );
+        cout << "          \n";
+        
+        SetConsoleTextAttribute( h, 0xBC );
+        cout << " Jasnoczerwony tekst na blekitnym tle\n";
+        
+        SetConsoleTextAttribute( h, 0xD0 );
+        cout << "          \n";
+        
+        //============================================
+        
+        // Ustawienie koloru tła i tekstu na tę samą wartość powoduje, że taki komunikat będzie niewidoczny.
+        // ... ale wciąż będzie go można zaznaczyć na ekranie i przekopiować do np. Notatnika.
+        // Spróbuj jak nie wierzysz.
+        
+        SetConsoleTextAttribute( h, 0x90 );
+        cout << "Tajna wiadomosc\n";
+        
+        SetConsoleTextAttribute( h, 0x99 );
+        cout << "Serio! Tego tekstu nie widać na ekranie ale on tu jest!\n";
+        
+        SetConsoleTextAttribute( h, 0x90 );
+        cout << "Tajna wiadomosc\n";
+        
+        //============================================
+        
+        // Możemy tym sposobem wzbogacać nasz program o ciekawe efekty np.:
+        // Dobre komunikaty na zielono, złe komunikaty na czerwono
+        // Albo wstawiać proste obrazy, aby program był barziej atrakcyjny
+        
+        SetConsoleTextAttribute( h, 0xFC );
+        cout << "                \n";
+        cout << "                \n";
+        cout << "  P O L S K A   \n";
+        SetConsoleTextAttribute( h, 0xCF );
+        cout << " BIALO-CZERWONI \n";
+        cout << "                \n";
+        cout << "                \n";
+        
+        //============================================
+        
+        // Raz ustawione kolory będą działały aż je odwołamy,
+        // dlatego powinniśmy pamiętać o zmianie kolorystyki, jeśli będzie potrzebna.
+        SetConsoleTextAttribute( h, 0x07 );
+        cout << "Standardowe kolory komunikatow (o ile tak wlasnie masz ustawione w swoim oknie)" << endl;
+        
+        return 0;
+}

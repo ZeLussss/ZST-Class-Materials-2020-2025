@@ -1,0 +1,7 @@
+Zapisz program, który wykorzysta wbudowane funkcje matematyczne.
+Wczytaj kilka liczb (różnych typów) do programu.
+Zademonstruj działanie funkcji matematycznych (obliczenia na zmiennych wprowadzonych).
+
+Wstaw przykładowe komentarze opisujące co się dzieje w danym miejscu kodu.
+
+W ramach rozwiązania oddaj tylko jeden plik .cpp z kodem programu.

@@ -1,0 +1,191 @@
+﻿#include <iostream>
+#include <windows.h>
+#include <conio.h> // Potrzebne do getch()
+
+
+using namespace std;
+
+
+// Gotowa funkcja do włączania/wyłączania migania kursora
+// W tym momencie nie musimy się zastanawiać jak ona działa. :)
+// Po prostu kopiujemy cały poniższy kod funkcji do naszego programu i korzystamy do woli.
+// W main() tylko wywołujemy tą funkcję z parametrem true/false.
+void Pokaz_kursor_na_ekranie( bool jest_kursor )
+{
+    // Pobieramy tzw. uchwyt do okna, do naszej konsoli.
+        // To specjalna zmienna przechowująca "numer rejestracyjny" okna/programu z którymi będziemy się chcieli skomunikować naszym programem.
+        HANDLE h = GetStdHandle( STD_OUTPUT_HANDLE );
+
+
+    // Zmienna przechowująca własciwości kursora m.in. pozycję w oknie
+        CONSOLE_CURSOR_INFO wlasciwosci_kursora;
+
+
+    GetConsoleCursorInfo( h, &wlasciwosci_kursora );
+    wlasciwosci_kursora.bVisible = jest_kursor; // Tutaj włączamy/wyłączamy miganie kursora
+    SetConsoleCursorInfo( h, &wlasciwosci_kursora );
+}
+//=======================================================
+
+
+int main()
+{
+        // Pobieramy tzw. uchwyt do okna, do naszej konsoli
+        // To specjalna zmienna przechowująca "numer rejestracyjny" okna/programu z którymi będziemy się chcieli skomunikować naszym programem.
+        HANDLE h = GetStdHandle( STD_OUTPUT_HANDLE );
+        
+        /*
+        Gdybyśmy tworzyli prostą animację w konsoli, albo chcieli dodrukować drobne rzeczy,
+        musielibyśmy od nowa przedrukować cały dostępny ekran z tymi zmianami z użyciem system("cls")
+        Takie częste przedrukowywanie powodowałoby wolniejszą pracę programu oraz miganie ekranu.
+        Znacznie lepszym rozwiązaniem jest samo przeniesienie kursora w miejsce gdzie chcemy coś dodrukować,
+        dodrukowanie TYLKO TEGO (zostawienie całej reszty ekranu w spokoju). :)
+        */
+        
+        // Na początek wyłączymy miganie kursora (bo jest denerwujące w naszym przykładzie)
+        // Wykorzystamy gotową funkcję - to ta zadeklarowana przed main()
+        // Tutaj jedynie wywołujemy ją z opcją WYŁĄCZENIA migania.
+        // Gdybyśmy chcieli włączyć miganie, to w dowolnym momencie możemy to zrobić zamieniajac parametr na true.
+        Pokaz_kursor_na_ekranie( false );
+        
+        
+        // Tworzymy zmienną "koordynat" typu COORD. Zmienna ta ma dwa pola: x i y.
+        // X - odległość od lewej krawędzi okna, liczona od ZERA jako pierwszej kolumny
+        // Y - odległość od GÓRNEJ krawędzi okna, liczona od ZERA jako pierwszej linii
+        COORD pozycja_kursora;
+        pozycja_kursora.X = 20;
+        pozycja_kursora.Y =  5;
+        
+        // Ustawiamy pozycję kursora
+        SetConsoleCursorPosition( h, pozycja_kursora );
+        cout << "X";
+        // Drukujemy znak "X" OD MIEJSCA gdzie jest kursor.
+        // Uwaga! Kursor tam jest dalej, więc jeśli nie przejdziemy nim w inne miejsce, to będziemy dodrukowywali dalej w prawo.
+        
+        // Zmieniamy pozycję kursora i drukujemy w innym miejscu
+        pozycja_kursora.X = 30;
+        pozycja_kursora.Y =  3;
+        SetConsoleCursorPosition( h, pozycja_kursora );
+        cout << "?";
+        
+        //------------------------------
+        
+        // Jak ktoś jest leniwy, to może deklarować tak:
+        COORD inna_pozycja_kursora = { 10, 2 };
+        SetConsoleCursorPosition( h, inna_pozycja_kursora );
+        cout << "trzeci...";
+        
+        // ... a zmieniać OBIE współrzędne tak:
+        inna_pozycja_kursora = { 2, 3 };
+        SetConsoleCursorPosition( h, inna_pozycja_kursora );
+        cout << "..++..";
+        
+        //------------------------------
+        
+        // Jak ktoś jest jeszcze bardziej leniwy to może od razu współrzędne pisać przy zmianie pozycji tak:
+        SetConsoleCursorPosition( h, { 15, 7 } );
+        cout << "-|-";
+        
+        //------------------------------
+        
+        unsigned ile_ruchow;
+        
+        SetConsoleCursorPosition( h, { 0, 22 } );
+        cout << "Podaj ile ruchow chcesz wykonac dla postaci: ";
+        
+        Pokaz_kursor_na_ekranie( true ); // Przydałoby sie tutaj włączyć kusor, aby użytkownik widział gdzie i co trzeba wpisać.
+        cin  >> ile_ruchow;
+        Pokaz_kursor_na_ekranie( false ); // Teraz możemy już wyłączyć miganie
+        
+        COORD pozycja_postaci = { 30, 10 }; // Lewy górny róg postaci do "rysowania". No i jakaś pozycja początkowa musi być.
+        
+        while( ile_ruchow-- ) // Pętla wykona się tyle razy ile podaliśmy, ale o pętlach będę mówił na przyszłych lekcjach.
+        {
+                // Wypisujemy instrukcję gry
+                // Odświeżamy co ruch, bo jak gracz wejdzie na to pole, to zamaże ten komunikat
+                SetConsoleCursorPosition( h, { 0, 0 } );
+                cout << "Sterowanie: w s a d";
+                
+                // Wypisujemy ile zostało ruchów do końca
+                // Odświeżamy co ruch, bo jak gracz wejdzie na to pole, to zamaże ten komunikat
+                SetConsoleCursorPosition( h, { 30, 0 } );
+                cout << "Pozostalo ruchow:           "; // Najpierw zamazujemy trochę więcej, aby nie zostały jakieś cyfry po dużych liczbach "po prawej".
+                SetConsoleCursorPosition( h, { 48, 0 } ); 
+                cout << ile_ruchow;
+                
+                // Wypisujemy pozycję postaci (lewy górny róg postaci)
+                // Odświeżamy co ruch, bo jak gracz wejdzie na to pole, to zamaże ten komunikat
+                SetConsoleCursorPosition( h, { 60, 0 } );
+                cout << "Pozycja: " << pozycja_postaci.X << ", " << pozycja_postaci.Y << "    "; // Dodrukowujemy troszeczkę, aby duże współrzędne nie zostawiały pozostałości "z prawej"
+                
+                char znak = getch(); // Pobieramy kod wciśniętego klawisza ale BEZ DRUKOWANIA go na ekranie
+                
+                // Sprawdzamy który znak został wprowadzony
+                // Od razu robimy zabezpieczenie współrzędnych, aby postać nie wypadała za ekran
+                if( znak == 'a' )
+                {
+                        if( 0 < pozycja_postaci.X )
+                        {
+                                pozycja_postaci.X--; // przesuń w lewo
+                        }
+                }
+                else if( znak == 'd' )
+                {
+                        if( pozycja_postaci.X < 70 )
+                        {
+                                pozycja_postaci.X++; // przesuń w prawo
+                        }
+                }
+                else if( znak == 'w' )
+                {
+                        if( 0 < pozycja_postaci.Y )
+                        {
+                                pozycja_postaci.Y--; // przesuń do góry
+                        }
+                }
+                else if( znak == 's' )
+                {
+                        if( pozycja_postaci.Y < 20 )
+                        {
+                                pozycja_postaci.Y++; // przesuń w dół
+                        }
+                }
+                else
+                {
+                        break; // przerywamy działanie pętli
+                }
+                
+                // No to drukujemy postać
+                // Uwaga! Nasza postać ma "pustą ramkę" dookoła siebie zbudowaną za spacji, 
+                // aby nią kasować swoje własne pozostałości z poprzedniej klatki animacji.
+                // Oczywiście można to (łatwo) zrobić i bez tego, ale to zadanie pozostawiam Tobie do rozpoznania jak to zrobić. :)
+                // Wykorzystamy dodatkowe zmienne aby nie zmodyfikować oryginalnej pozycji postaci:
+                short x = pozycja_postaci.X;
+                short y = pozycja_postaci.Y;
+                
+                SetConsoleCursorPosition( h, { x, y++ } ); // y++ przy okazji zapewniamy sobie przejscie do kolejnej linii niżej, pod kolejny wydruk
+                cout << "       ";
+                SetConsoleCursorPosition( h, { x, y++ } );
+                cout << "  ___  ";
+                SetConsoleCursorPosition( h, { x, y++ } );
+                cout << " /o o\\ ";
+                SetConsoleCursorPosition( h, { x, y++ } );
+                cout << " | ^ | ";
+                SetConsoleCursorPosition( h, { x, y++ } );
+                cout << " \\_=_/ ";
+                SetConsoleCursorPosition( h, { x, y++ } );
+                cout << "       ";
+        }
+        
+        
+        //------------------------------
+        
+        // Przesunę pozycję kursora gdzieś na dół, aby komunikat o zamknięciu programu nie zasłonił naszego "dzieła" :)
+        SetConsoleCursorPosition( h, { 0, 24 } );
+        
+    // Kończymy program, więc włączmy widocznosć kursora
+    // Niech sobie pomiga na koniec. :)
+        Pokaz_kursor_na_ekranie( true );
+        
+        return 0;
+}

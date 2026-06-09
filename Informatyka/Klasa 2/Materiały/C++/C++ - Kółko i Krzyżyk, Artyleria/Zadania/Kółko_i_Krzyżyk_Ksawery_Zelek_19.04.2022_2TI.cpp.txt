@@ -1,0 +1,383 @@
+﻿#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+
+int main()
+{
+        const int znak(3), znak2(3);
+        int pozycja_x, pozycja_y;
+        cout << "\n";
+        char Tab1[znak][znak2] = { {'#', '#', '#' },
+                                                           {'#', '#', '#' },
+                                                           {'#', '#', '#' } };
+        for (unsigned a = 0; a < 3; a++)
+        {
+                for (unsigned b = 0; b < 3; b++)
+                {
+                        cout.width(4);
+                        cout << Tab1[a][b];
+                }
+                cout << "\n";
+        }
+        for (int a = 1; a < 100; a++)
+        {
+        skok:
+                if (Tab1[0][0] == 'O' && Tab1[0][1] == 'O' && Tab1[0][2] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[0][2] == 'O' && Tab1[1][2] == 'O' && Tab1[2][2] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[2][2] == 'O' && Tab1[2][1] == 'O' && Tab1[2][0] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[2][0] == 'O' && Tab1[1][0] == 'O' && Tab1[0][0] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[0][0] == 'O' && Tab1[1][1] == 'O' && Tab1[2][2] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[0][2] == 'O' && Tab1[1][1] == 'O' && Tab1[2][0] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[0][1] == 'O' && Tab1[1][1] == 'O' && Tab1[2][1] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[1][0] == 'O' && Tab1[1][1] == 'O' && Tab1[1][2] == 'O')
+                {
+                        cout << "\n--- Wygrana: gracz 2 ---\n";
+                        break;
+                }
+                else if (Tab1[0][0] == '#' || Tab1[0][1] == '#' || Tab1[0][2] == '#' || Tab1[1][0] == '#' || Tab1[1][1] == '#' || Tab1[1][2] == '#' || Tab1[2][0] == '#' || Tab1[2][1] == '#' || Tab1[2][2] == '#')
+                {
+                }
+                else
+                {
+                        cout << "REMIS";
+                        break;
+                }
+                cout << "\n";
+                cout << "[Gracz 1] Podaj pozycje x (1-3): ";
+                cin >> pozycja_x;
+                cout << "\n[Gracz 1] Podaj pozycje y (1-3): ";
+                cin >> pozycja_y;
+                system("cls");
+                cout << "\n";
+
+
+                if (pozycja_x == 1 && pozycja_y == 1)
+                {
+                        Tab1[0][0] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 1 && pozycja_y == 2)
+                {
+                        Tab1[1][0] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 1 && pozycja_y == 3)
+                {
+                        Tab1[2][0] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 2 && pozycja_y == 1)
+                {
+                        Tab1[0][1] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 2 && pozycja_y == 2)
+                {
+                        Tab1[1][1] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 2 && pozycja_y == 3)
+                {
+                        Tab1[2][1] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 3 && pozycja_y == 1)
+                {
+                        Tab1[0][2] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 3 && pozycja_y == 2)
+                {
+                        Tab1[1][2] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 3 && pozycja_y == 3)
+                {
+                        Tab1[2][2] = 'X';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else
+                {
+                        goto skok;
+                }
+                if (Tab1[0][0] == 'X' && Tab1[0][1] == 'X' && Tab1[0][2] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[0][2] == 'X' && Tab1[1][2] == 'X' && Tab1[2][2] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[2][2] == 'X' && Tab1[2][1] == 'X' && Tab1[2][0] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[2][0] == 'X' && Tab1[1][0] == 'X' && Tab1[0][0] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[0][0] == 'X' && Tab1[1][1] == 'X' && Tab1[2][2] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[0][2] == 'X' && Tab1[1][1] == 'X' && Tab1[2][0] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[0][1] == 'X' && Tab1[1][1] == 'X' && Tab1[2][1] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[1][0] == 'X' && Tab1[1][1] == 'X' && Tab1[1][2] == 'X')
+                {
+                        cout << "\n--- Wygrana: gracz 1 ---\n";
+                        break;
+                }
+                else if (Tab1[0][0] == '#' || Tab1[0][1] == '#' || Tab1[0][2] == '#' || Tab1[1][0] == '#' || Tab1[1][1] == '#' || Tab1[1][2] == '#' || Tab1[2][0] == '#' || Tab1[2][1] == '#' || Tab1[2][2] == '#')
+                {
+                }
+                else
+                {
+                        cout << "remis";
+                        break;
+                }
+                cout << "[Gracz 2] Podaj pozycje x (1-3): ";
+                cin >> pozycja_x;
+                cout << "\n[Gracz 2] Podaj pozycje y (1-3): ";
+                cin >> pozycja_y;
+                system("cls");
+                cout << "\n";
+
+
+                if (pozycja_x == 1 && pozycja_y == 1)
+                {
+                        Tab1[0][0] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 1 && pozycja_y == 2)
+                {
+                        Tab1[1][0] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 1 && pozycja_y == 3)
+                {
+                        Tab1[2][0] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 2 && pozycja_y == 1)
+                {
+                        Tab1[0][1] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 2 && pozycja_y == 2)
+                {
+                        Tab1[1][1] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 2 && pozycja_y == 3)
+                {
+                        Tab1[2][1] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 3 && pozycja_y == 1)
+                {
+                        Tab1[0][2] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 3 && pozycja_y == 2)
+                {
+                        Tab1[1][2] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+                else if (pozycja_x == 3 && pozycja_y == 3)
+                {
+                        Tab1[2][2] = 'O';
+                        for (unsigned a = 0; a < 3; a++)
+                        {
+                                for (unsigned b = 0; b < 3; b++)
+                                {
+                                        cout.width(4);
+                                        cout << Tab1[a][b];
+                                }
+                                cout << "\n";
+                        }
+                }
+        }
+
+
+
+
+        return 0;
+}

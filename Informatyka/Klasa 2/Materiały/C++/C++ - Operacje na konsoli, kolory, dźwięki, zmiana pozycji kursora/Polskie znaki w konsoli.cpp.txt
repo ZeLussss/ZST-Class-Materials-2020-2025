@@ -1,0 +1,43 @@
+﻿ď»ż#include <iostream>
+#include <windows.h> // Potrzebne do system() i Sleep()
+
+
+using namespace std;
+
+
+int main()
+{
+        cout << "Komunikat tekstowy: zażółć gęślą jaźń" << endl << endl;
+        
+        /*
+        Normalnie w konsoli naszego programu w Windowsie nie ma polskich znaków.
+        Nie jest aktywna właściwa strona kodowa.
+        Aby to zmienić należy ją włączyć.
+        */
+        
+        Sleep( 1000 ); // Czekamy 100ms
+        
+        // Funkcja system() pozwala na zapis dokładnie tych samych poleceń, co byśmy pisali w cmd.
+        // Można tym sposobnem np. uruchomić inny program. :)
+        
+        system( "chcp 1250" );
+        // Zamiana strony kodowej (change code page) na "Windows 1250", która obsługuje polskie znaki.
+        // Od tej pory można je już normalnie wyświetlać w konsoli.
+        
+        cout << "Komunikat tekstowy: zażółć gęślą jaźń" << endl << endl;
+        Sleep( 1000 ); // Czekamy 100ms
+        
+        //=======================================
+        
+        // Ponieważ komunikat na ekranie "aktywna strona kodowa..." może nieco rozpraszać w grze rpg, którą akurat piszesz... ;)
+        // ... dobrą taktyką jest na samym początku zmiana strony kodowej, a następnie od razu wyczyścić ekran: system( "cls" )
+        // ... ale tego spróbuj już sam. :)
+        
+        cout << "Uwaga! Jeśli pomimo tego na ekranie nie wyświetlają się polskie znaki,\n";
+        cout << "to jest to wina domyślnych ustawień systemowych okna konsoli.\n";
+        cout << "Trzeba wejść w ustawienia TEGO okna i wybrać inną czcionkę,\n";
+        cout << "taką która obsługuje polskie znaki.\n";
+        cout << "(To będzie jednorazowa akcja).\n";
+        
+        return 0;
+}

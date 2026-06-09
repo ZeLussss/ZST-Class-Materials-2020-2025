@@ -1,0 +1,218 @@
+﻿#include <iostream>
+#include <Windows.h>
+
+
+using namespace std;
+
+
+int main(int argc, char** argv)
+{
+        // Potrzebne do kolorowania
+        // Tylko do prezentacji! Aby było łatwiej zobaczyć co i jak.
+        // Nie trzeba tak robić w zadaniach.
+        HANDLE h = GetStdHandle( STD_OUTPUT_HANDLE );
+        
+        // Deklaracja tablicy "zielonej", 6 elementów, wypełnienie komórek przy deklaracji.
+        int ziel[ 6 ] = { 1, 2, 3, 4, 5, 6 };
+        
+        // Deklaracja tablicy "niebieskiej", 4 elementy, wypełnienie komórek przy deklaracji.
+        int nieb[ 4 ] = { 10, 20, 30, 40 };
+        
+        // Deklaracja tablicy "pomarańczowej", 9 elementów, wypełnienie komórek w trakcie zadania.
+        // Co najwyżej możemy w tym miejscu ją wyzerować.
+        int poma[ 9 ] = {};
+        
+        // Ogólna zasada. Zadanie zrealizowane główne techniką kopiuj-wklej.
+        // Pierwsza pętla napisana, kolejne można kopiować (pamiętając o zmianie indeksów!).
+        // Kodu może wydawać się dużo, ale dzięki użyciu Ctrl+C Ctrl+V można ten kod stworzyć bardzo szybko. 
+        
+        // Wypełnianie tablicy wynikowej.
+        /*
+        Generalna zasada wypełniania, to umiejętne podzielenie tablic na przedziały.
+        Używamy standardowej pętli:
+        for( int i = <indeks startu>; i < <indeks_końca + 1>; i++ )
+        {
+                tab_wynikowa[ i ] = tab_A[ X ] ? tab_B[ Y ];
+                
+                gdzie:
+                ? - operator jakiego używamy do obliczeń na tablicach
+                X, Y - indeksy tablic podstawowych na których wykonujemy operacje. Trzeba je umiejętnie przeliczyć.
+        }
+        Dla ułatwienia we wzorze zaznaczono indeksy tablic:
+        czerwone - dla tablicy "zielonej",
+        fioletowe - dla tablicy "niebieskiej",
+        błękitne - dla tablicy "pomarańczowej"
+        */
+        
+        /* Zauważmy, że tablica "pomarańczowa" z przykładu jest zbudowana z trzech przedziałów:
+        dodawanie = zielona + niebieska
+        mnożenie = zielona * zielona
+        odejmowanie = niebieska - zielona
+        */
+        
+        // Przedział "lewy" - dodawanie
+        for( int i = 0; i < 3; i++ )
+        {
+                poma[ i ] = ziel[ i ] + nieb[ i + 1 ];
+                /*
+                Proszę spojrzeć na wzór wypełnienia!
+                i = 0, bo PIERWSZY indeks tablicy pomarańczowej jaki będziemy wypełniać to 0
+                i < 3, bo OSTATNI  indeks tablicy pomarańczowej jaki będziemy wypełniać to 2
+                +, bo dodajemy komórki
+                poma[ i ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy pomarańczowej o indeksach 0, 1, 2
+                ziel[ i ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy zielonej o indeksach 0, 1, 2
+                nieb[ i + 1 ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy niebieskiej o indeksach 1, 2, 3
+                */
+        }
+        
+        // Przedział "środkowy" - mnożenie
+        for( int i = 3; i < 6; i++ )
+        {
+                poma[ i ] = ziel[ i ] * ziel[ i - 3 ];
+                /*
+                Proszę spojrzeć na wzór wypełnienia!
+                i = 3, bo PIERWSZY indeks tablicy pomarańczowej jaki będziemy wypełniać to 3
+                i < 5, bo OSTATNI  indeks tablicy pomarańczowej jaki będziemy wypełniać to 5
+                *, bo mnożymy komórki
+                poma[ i ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy pomarańczowej o indeksach 3, 4, 5
+                ziel[ i ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy zielonej o indeksach 3, 4, 5
+                ziel[ i - 3 ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy niebieskiej o indeksach 0, 1, 2
+                */
+        }
+        
+        // Przedział "prawy" - odejmowanie
+        for( int i = 6; i < 9; i++ )
+        {
+                poma[ i ] = nieb[ i - 6 ] - ziel[ i - 3 ];
+                /*
+                Proszę spojrzeć na wzór wypełnienia!
+                i = 6, bo PIERWSZY indeks tablicy pomarańczowej jaki będziemy wypełniać to 6
+                i < 9, bo OSTATNI  indeks tablicy pomarańczowej jaki będziemy wypełniać to 8
+                -, bo odejmujemy komórki
+                poma[ i ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy pomarańczowej o indeksach 6, 7, 8
+                nieb[ i - 6 ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy zielonej o indeksach 0, 1, 2
+                ziel[ i - 3 ] - bo w kolejnych krokach pętli będziemy wywoływać komórki tablicy niebieskiej o indeksach 3, 4, 5
+                */
+        }
+        
+        
+        // Wyświetlanie.
+        /*
+        Generalna zasada wydruku to standardowa pętla:
+        for( int i = 0; i < <rozmiar_tablicy>; i++ )
+        {
+                cout.width( 4 ); // Lub inna wartość, o ile chcemy wyrównać.
+                cout << tab[ i ]; // Tablica, której elementy chcemy wydrukować.
+        }
+        cout << endl; // Tylko wtedy, gdy zakończyliśmy wydruk w tej linii i chcemy przejść do kolejnej.
+        */
+        
+        // PIERWSZA LINIA
+        // Wyrównanie wydruku. Jedno pole puste. Robimy ręcznie. Więcej pól w pętli.
+        cout.width( 4 ); // Lub inna wartość, o ile chcemy wyrównać.
+        cout << " "; // Drukujemy "spację", ale wydruk się wyrówna do 4 pól tak jak chcemy.
+        
+        // Tablica zielona
+        SetConsoleTextAttribute( h, 0x02 ); // Malujemy liczby na zielono
+        for( int i = 0; i < 6; i++ )
+        {
+                cout.width( 4 ); // Lub inna wartość, o ile chcemy wyrównać.
+                cout << ziel[ i ]; // Tablica, której elementy chcemy wydrukować.
+        }
+        
+        // Tablica niebieska
+        SetConsoleTextAttribute( h, 0x09 ); // Malujemy liczby na niebiesko
+        for( int i = 0; i < 4; i++ )
+        {
+                cout.width( 4 );
+                cout << nieb[ i ];
+        }
+        cout << endl; // Bo kończymy tę linię
+        
+        
+        // DRUGA LINIA - operatory
+        // Wyrównanie wydruku.
+        cout.width( 4 );
+        cout << " ";
+        
+        // + SUMA
+        SetConsoleTextAttribute( h, 0x0C ); // Malujemy operatory na czerwono
+        for( int i = 0; i < 3; i++ )
+        {
+                cout.width( 4 );
+                cout << "+";
+        }
+        
+        // * ILOCZYN
+        SetConsoleTextAttribute( h, 0x0D ); // Malujemy operatory na fioletowo
+        for( int i = 0; i < 3; i++ )
+        {
+                cout.width( 4 );
+                cout << "*";
+        }
+        
+        // - RÓŻNICA
+        SetConsoleTextAttribute( h, 0x0B ); // Malujemy operatory na cyjanek
+        for( int i = 0; i < 3; i++ )
+        {
+                cout.width( 4 );
+                cout << "-";
+        }
+        cout << endl; // Bo kończymy tę linię
+        
+        
+        // TRZECIA LINIA
+        // Tu nie wyrównujemy, tak wyszło
+        
+        // Tablica niebieska
+        SetConsoleTextAttribute( h, 0x09 ); // Malujemy liczby na niebiesko
+        for( int i = 0; i < 4; i++ )
+        {
+                cout.width( 4 );
+                cout << nieb[ i ];
+        }
+        
+        // Tablica zielona
+        SetConsoleTextAttribute( h, 0x02 ); // Malujemy liczby na zielono
+        for( int i = 0; i < 6; i++ )
+        {
+                cout.width( 4 );
+                cout << ziel[ i ];
+        }
+        cout << endl; // Bo kończymy tę linię
+        
+        
+        // CZWARTA LINIA - operatory
+        SetConsoleTextAttribute( h, 0x0E ); // Malujemy operatory na żółto
+        // Wyrównanie wydruku.
+        cout.width( 4 );
+        cout << " ";
+        
+        // = PRZYPISANIE
+        for( int i = 0; i < 9; i++ )
+        {
+                cout.width( 4 );
+                cout << "=";
+        }
+        cout << endl; // Bo kończymy tę linię
+        
+        
+        // PIĄTA LINIA - wydruk tablicy wynikowej
+        SetConsoleTextAttribute( h, 0x06 ); // Malujemy liczby na niebiesko
+        // Wyrównanie wydruku.
+        cout.width( 4 );
+        cout << " ";
+        
+        // Tablica pomarańczowa
+        for( int i = 0; i < 9; i++ )
+        {
+                cout.width( 4 );
+                cout << poma[ i ];
+        }
+        cout << endl; // Bo kończymy tę linię
+        
+        // Kolory domyślne
+        SetConsoleTextAttribute( h, 0x07 ); // Malujemy tekst na domyślny kolor biały
+        
+        return 0;
+}

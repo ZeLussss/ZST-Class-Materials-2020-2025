@@ -1,0 +1,93 @@
+﻿#include <iostream>
+#include <windows.h> // Potrzebne do kolorów i dźwięków
+
+
+using namespace std;
+
+
+int main()
+{
+        // Pobieramy tzw. uchwyt do okna, do naszej konsoli
+        // To specjalna zmienna przechowująca "numer rejestracyjny" okna/programu z którymi będziemy się chcieli skomunikować naszym programem.
+        HANDLE h = GetStdHandle( STD_OUTPUT_HANDLE );
+        
+        // Dźwięk "alarmu" wywołujemy drukując specjalny znak na ekranie.
+        // Przydatne (ale czasami denerwujące), aby np. zwrócić uwagę użytkownika, że coś się wydarzyło w programie.
+        // Dźwięk jest różny w zależności od ustawień systemowych na danym komputerze.
+        cout << "Prosty alarm." << "\a" << endl;
+        
+        // Wstrzymujemy program na 1000ms
+        Sleep( 500 );
+        // Uwaga - program nie czeka aż dźwięk systemowy się kończy, tylko działa dalej "równolegle".
+        // Czas wstrzymania liczony jest od momentu ROZPOCZĘCIA grania alarmu systemowego.
+        
+        cout << "Prosty alarm 3x."<< "\a\a\a" << endl;
+        Sleep( 1500 );
+        
+        
+        // Przykładowe proste dźwięki
+        // Beep( częstotliwość, długość_w_milisekundach );
+        // Można w zasadzie dowolnie ustawiać
+        // Częstotliwości od około 100 do 12'000 bez problemu można wytworzyć
+        // Wszystko zależy od jakości głośników. Niektóre skrajne częstotliwości mogą nie być (poprawnie) generowane
+        cout << "Buuuuuuuuuuuuuuuuuu." << endl; 
+        Beep(   100, 1000 );
+        
+        cout << "Piiiiiiiiiiiiiiiiii." << endl; 
+        Beep( 12000, 2000 );
+        Sleep( 500 );
+        
+        
+        // Częstotliwości pobrane z Wikipedii
+        // Przykład: do re mi fa sol la si do
+        cout << "do re mi fa sol la si do" << endl;
+        Beep( 262, 250 ); // do
+        Beep( 294, 250 ); // re
+        Beep( 330, 250 ); // mi
+        Beep( 349, 250 ); // fa
+        Beep( 392, 250 ); // sol
+        Beep( 440, 250 ); // la
+        Beep( 494, 250 ); // si
+        Beep( 523, 250 ); // do
+        Sleep( 1000 );
+        
+        // A teraz jakaś muzyczka
+        // Aby było łatwiej to wstawmy dźwięki do zmiennych
+        unsigned d1 = 262;
+        unsigned d2 = 294;
+        unsigned d3 = 330;
+        unsigned d4 = 349;
+        unsigned d5 = 392;
+        unsigned d6 = 440;
+        unsigned d7 = 494;
+        unsigned d8 = 523;
+        
+        cout << "la la la la la ..." << endl;
+        Beep( d1, 250 );
+        Beep( d2, 250 );
+        Beep( d3, 250 );
+        Beep( d1, 250 );
+        Beep( d1, 250 );
+        Beep( d2, 250 );
+        Beep( d3, 250 );
+        Beep( d1, 250 );
+        Beep( d3, 250 );
+        Beep( d4, 250 );
+        Beep( d5, 500 );
+        Beep( d3, 250 );
+        Beep( d4, 250 );
+        Beep( d5, 500 );
+        Beep( d5, 250 );
+        Beep( d6, 250 );
+        Beep( d5, 250 );
+        Beep( d4, 250 );
+        Beep( d3, 250 );
+        Beep( d5, 500 );
+        Beep( d3, 250 );
+        Beep( d2, 250 );
+        Beep( d1, 500 );
+        
+        cout << "Oklaski! Kurtyna! :D" << endl;
+        
+        return 0;
+}

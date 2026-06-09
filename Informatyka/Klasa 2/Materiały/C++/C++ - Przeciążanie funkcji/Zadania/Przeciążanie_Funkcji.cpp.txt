@@ -1,0 +1,63 @@
+﻿#include <iostream>
+
+
+using namespace std;
+
+
+void Funkcja_z1(int a = 1, float b = 12.5, bool c = false, string d = "Jest super!")  //Zadanie 1
+{
+        b = a * b;
+        cout << "Wynik iloczynu liczb: " << b << endl;
+        if (c == true)
+        {
+                cout << d << endl;
+        }
+        cout << "\n";
+}
+
+
+int Srednia(int a, int b)  //Zadanie 2
+{
+        a = (a * b) / 2;
+        return a;
+}
+double Srednia(double a, double b)
+{
+        a = (a * b) / 2;
+        return a;
+}
+char Srednia(char a, char b)
+{
+        a = (a * b) / 2;
+        return a;
+}
+
+
+
+
+int main()
+{
+    cout << "ZADANIE 1\n\n";
+    Funkcja_z1();
+        Funkcja_z1( 4 );
+        Funkcja_z1( 8, 4.7 );
+        Funkcja_z1( 6, 3.2, true );
+        Funkcja_z1( 3, 2.1, false, "Lubię jeść!" );
+        Funkcja_z1( 9, 8.3, true, "Chcę iść spać...");
+    
+    cout << "ZADANIE 2\n\n";
+    int a,b;
+        double c,d;
+        char e,f;
+        
+        cout << "Podaj dwie liczby całkowite: ";
+        cin >> a >> b;
+    cout << "Podaj dwie liczby zmiennoprzecinkowe: ";
+        cin >> c >> d;
+        cout << "Podaj dwie litery: ";
+        cin >> e >> f;
+        
+        cout << "\nŚrednia z liczb całkowitych to: " << Srednia( a, b ) << endl;
+        cout << "Średnia z liczb zmiennoprzecinkowych to: " << Srednia( c, d ) << endl;
+        cout << "Średnia z liter to: " << Srednia( e, f ) << endl;
+}
