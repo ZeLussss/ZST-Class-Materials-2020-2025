@@ -1,0 +1,21 @@
+https://linuxize.com/post/usermod-command-in-linux/
+
+
+Część 2. Zarządzanie użytkownikami i grupami w Linux
+
+
+tworzenie konta np. Robert wraz z określonym katalogiem domowym np. /home/Informatyk
+
+ustawienie by maksymalny/minimalny okres między zmianami hasła dla określonego użytkownika wynosił określoną ilość dni- edycja pliku
+
+ustawienie by każde zakładane konto miało min/maksymalny okres między zmianami hasła wynoszący określoną ilość dni – modyfikacja pliku
+
+polecenie które ustawia min/maksymalny okres zmiany hasła dla użytkownika
+
+utwórz grupę
+
+dodaj użytkownika do grupy
+
+załóż hasło użytkownikowi w taki sposób by było widoczne w konsoli podczas zakładania go
+
+zablokuj konto użytkownika- konto blokujemy za pomocą blokady hasła
